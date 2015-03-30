@@ -22,9 +22,12 @@ function animationFrame() {
     ctx.strokeStyle = colorBall;
     ctx.arc(sx, sy, ballSize, 0, 2 * Math.PI);
 
-    document.getElementById('SizeBtn').addEventListener('click', function () {
+   document.getElementById('SizeBtn').addEventListener('click', function () {
         ballSize = document.getElementById('ballSize').value;
         colorBall = document.getElementById('colorBall').value;
+			if(ballSize<5){
+					ballSize=5;
+			}
     });
 
     if (flag) {
