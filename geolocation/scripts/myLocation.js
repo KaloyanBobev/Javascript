@@ -3,8 +3,8 @@
     var map,
         watchId=null,
         ourCoords = {
-        latitude: -42.666667,
-        longitude: 23.30000
+        latitude: 47.624851,
+        longitude: -122.52099
     };
 
     if (navigator.geolocation) {
