@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tweet Shirts</title>
+    <script src="scripts/tweetShirts.js"></script>
+    <link rel="stylesheet" href="styles/tweetShirts.css">
+</head>
+<body>
+    <h1>TweetShirt</h1>
+    <canvas width="600" height="200" id="tshirtCanvas">Upgrate your browser!!!</canvas>
+    <form>
+        <p>
+            <label for="backgroundColor">Select background color</label>
+            <select id="backgroundColor">
+                <option value="white" selected="selected">White</option>
+                <option value="black">Black</option>
+            </select>
+        </p>
+        <p>
+            <label for="shape">Circles or squares?</label>
+            <select id="shape">
+                <option value="none" selected="selected">Neither</option>
+                <option value="circles">Circles</option>
+                <option value="squares">Squares</option>
+            </select>
+        </p>
+        <p>
+            <label for="text">Input text</label>
+            <input type="text" id="text" placeholder="Tweets Shirts" size="20"/>
+        </p>
+        <p>
+            <input type="button" id="previewButton" value="Preview" />
+        </p>
+    </form>
+    
+</script>
+</body>
+</html>
