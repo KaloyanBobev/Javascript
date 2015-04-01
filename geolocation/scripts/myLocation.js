@@ -1,10 +1,10 @@
 ﻿window.onload = function () {
-	
+
     var map,
         watchId=null,
         ourCoords = {
-        latitude: degreesToDecimal(23,19,39),
-        longitude: degreesToDecimal(42,41,30)
+        latitude: -42.666667,
+        longitude: 23.30000
     };
 
     if (navigator.geolocation) {
@@ -24,7 +24,7 @@
         div.innerHTML += ' (with ' + position.coords.accuracy + ' meters accuracy)';
         var km = computeDistance(position.coords, ourCoords),
             distance = document.getElementById('distance');
-        distance.innerHTML = 'You are ' + km + ' km from Sofia';
+        distance.innerHTML = 'You are ' + km + ' km from WickedlySmart HQ';
 
         if (map == null) {
             showMap(position.coords);
@@ -110,9 +110,5 @@
             watchId = null;
         }
     }
-	
-	function degreesToDecimal(degrees, minutes, seconds) {
-		return degrees + (minutes / 60.0) + (seconds / 3600.0);
-	}
 
 }
