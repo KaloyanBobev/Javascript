@@ -20,11 +20,11 @@
         var latitude = position.coords.latitude,
             longitude = position.coords.longitude,
             div = document.getElementById('location');
-        div.innerHTML = ('You are at Latitude: ' + latitude + ', Longitude: ' + longitude);
+        div.innerHTML = ('You are at Latitude: ' + latitude.toFixed(6) + ', Longitude: ' + longitude.toFixed(6));
         div.innerHTML += ' (with ' + position.coords.accuracy + ' meters accuracy)';
         var km = computeDistance(position.coords, ourCoords),
             distance = document.getElementById('distance');
-        distance.innerHTML = 'You are ' + km + ' km from WickedlySmart HQ';
+        distance.innerHTML = 'You are ' + km.toFixed(2) + ' km from WickedlySmart HQ';
 
         if (map == null) {
             showMap(position.coords);
