@@ -7,7 +7,7 @@ var sx = 0,
    updateX = 0,
    updateY = 0,
    flag = true,
-   speed = 1,
+   speed = 5,
    ballSize = 5,
    colorBall = 'black';
 
@@ -35,7 +35,7 @@ function animationFrame() {
         updateY = speed;
     }
 
-    if (sx > canvas.width || sy > canvas.height) {
+    if (sx > canvas.width-ballSize || sy > canvas.height-ballSize) {
         updateX = speed;
         updateY = -speed;
         flag = false;
@@ -63,3 +63,33 @@ function animationFrame() {
 }
 
 animationFrame();
+
+
+
+
+
+
+
+
+
+//if (sx > canvas.width || sy > canvas.height) {
+//    updateX = speed;
+//    updateY = -speed;
+//    flag = false;
+//}
+
+//if (sx == canvas.width-ballSize) {
+//    updateX = -speed;
+//    updateY = -speed;
+//}
+
+//if (sy < ballSize) {
+//    updateX = -speed;
+//    updateY = speed;
+//}
+//if (sx < ballSize) {
+//    updateX = speed;
+//    updateY = speed;
+//}
+//sx += updateX;
+//sy += updateY;
