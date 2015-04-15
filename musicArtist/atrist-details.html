@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="style/app.css">
 </head>
-<body ng-app="musicApp" ng-controller="PageController">
+<body ng-app="musicApp" ng-controller="PageController" ng-cloak>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,12 +36,23 @@
                     <p><strong>Created:   </strong>{{artist.created }}</p>
                     <p>
                         <strong>Additional inforamtion</strong>
-                        <button class="btn btn-success btn-sm" ng-click="showMoreInfo()">{{showInfoText}}</button>
-                        <div ng-hide="hideInformation">
-                            <p><strong>Location:</strong>{{artist.additionalInformation.location}}</p>
-                            <p><strong>Albums:</strong>{{artist.additionalInformation.albums}}</p>
-                            <p><strong>Singles:</strong>{{artist.additionalInformation.singles}}</p>
+                        <button class="btn btn-success btn-sm pull-right" ng-click="showMoreInfo()">{{showInfoText}}</button>
+                        <div class="panel panel-default" ng-hide="hideInformation">
+                            <div class="panel-body">
+                                <p ng-class="greenTextClass"><strong>Location:</strong>{{artist.additionalInformation.location}}</p>
+                                <p ng-class="greenTextClass"><strong>Albums:</strong>{{artist.additionalInformation.albums}}</p>
+                                <p ng-class="greenTextClass"><strong>Singles:</strong>{{artist.additionalInformation.singles}}</p>
+                            </div>
                         </div>
+                    </p>
+                    <p>
+                        <strong>Band Members: </strong>
+                        <button class="btn btn-success btn-sm pull-right" ng-click="showBandMembers()">{{showBandMembersText}}</button>
+                        <ul class="list-group" ng-hide="HideBandMembers">
+                            <li class="list-group-item text-center"  ng-repeat="member in artist.additionalInformation.bandMembers"ng-class-odd="grayBackroundClass">
+                                <a href="#" ng-class="greenTextClass" ng-style="boldFontCss"> {{ member }} </a>
+                            </li>
+                        </ul>
                     </p>
                 </div>
                 <div class="col-md-6 image-container">
