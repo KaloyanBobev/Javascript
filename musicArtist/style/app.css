@@ -1,9 +1,13 @@
-.image-container img{
+.navbar{
+     background-color:green;
+}
+
+.image-container img {
     width:100%;
     height:100%;
 }
 
-.blue-text{
+.green-text{
     color:green;
 }
 
