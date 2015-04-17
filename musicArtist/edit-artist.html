@@ -32,26 +32,26 @@
         <div class="jumbotron" ng-controller="EditArtistController">
             <div class="row">
                 <div class="col-md-6">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" name="newArtistForm">
                         <h1>Artist</h1>
                         <fieldset>
                             <legend>Main Inforamtion</legend>
                             <div class="form-group">
                                 <label class="col-lg-2 control-label" for="name">Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="Name" id="name" class="form-control" ng-model="artist.name" />
+                                    <input type="text" required="required" placeholder="Name" id="name" class="form-control form-validation" ng-model="artist.name" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-2 control-label" for="image">Image</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="Image URL" id="image" class="form-control" ng-model="artist.image" />
+                                    <input type="text" required="required" placeholder="Image URL" id="image" ng-pattern="/\.(gif|jpg|jpeg|tiff|png)$/i" class="form-control form-validation" ng-model="artist.image" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-2 control-label" for="date">Created</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="Date Created (dd/mm/yy)" id="date" class="form-control" ng-model="artist.created" />
+                                    <input type="text" required="required" ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="Date Created (dd/mm/yy)" id="date" class="form-control form-validation" ng-model="artist.created" />
                                 </div>
                             </div>
                         </fieldset>
@@ -78,15 +78,16 @@
                         </fieldset>
                         <div class="form-group">
                             <div class="pull-right">
-                                <button class="btn btn-default" type="submit" ng-click="saveArtist(artist)">Save</button>
+                                <button class="btn btn-default" type="submit" ng-disabled="newArtistForm.$invalid" ng-click="saveArtist(artist,newArtistForm)">Save</button>
                                 <button class="btn btn-default" type="reset" ng-click="cancel()">Cancel</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="col-md-6 image-container">
+                    <img src="" ng-src="{{artist.image}}" />
+                </div>
             </div>
-
-
         </div>
     </div>
 
