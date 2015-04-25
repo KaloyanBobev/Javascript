@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-musicApp.factory('artistData', function(){
+musicApp.factory('artistData', function () {
     var artist = {
         id: 1,
         name: "Linkin Park",
@@ -42,6 +42,8 @@ musicApp.factory('artistData', function(){
     }
 
     return {
-        getArtist:artist
+        getArtist: artist
+
+        }
     }
-})
+);
