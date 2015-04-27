@@ -4,7 +4,7 @@ musicApp.controller('ArtistDetailsController',
     function ArtistDetailsController($scope,artistData) {
    
 
-         artistData.getArtist(2, function (data) {
+         artistData.getArtist(4).then( function(data) {
              $scope.artist = data;
         });
 

@@ -1,18 +1,22 @@
 ﻿'use strict';
 
-musicApp.factory('artistData', function ($http) {
+musicApp.factory('artistData', function ($http,$q) {
 
 
     return {
-        getArtist: function (id, successcb) {
-            $http({ method: 'GET', url: 'http://kaloyanbobev.com/demos/musicArtist/data/artist/' + id+'.json' })
+        getArtist: function (id) {
+
+            var defer = $q.defer();
+
+            $http({ method: 'GET', url: 'http://kaloyanbobev.com/demos/musicArtist/data/artist/' + id + '.json' })
                .success(function (data, status, headers, config) {
-                   successcb(data);
+                   defer.resolve(data);
                })
                .error(function (data, status, headers, config) {
-
+                   defer.reject(data);
                });
 
+            return defer.promise;
         }
 
     }
