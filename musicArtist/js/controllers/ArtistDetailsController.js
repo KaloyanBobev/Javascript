@@ -4,7 +4,9 @@ musicApp.controller('ArtistDetailsController',
     function ArtistDetailsController($scope,artistData) {
    
 
-    $scope.artist = artistData.getArtist;
+         artistData.getArtist(2, function (data) {
+             $scope.artist = data;
+        });
 
     $scope.hideInformation = true;
     $scope.showInfoText = "Show";
