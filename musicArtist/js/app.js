@@ -1,5 +1,5 @@
 'use strict';
 
 var musicApp = angular
-    .module('musicApp', [])
+    .module('musicApp', ['ngResource'])
     .constant('author', 'Kalyan Bobev');
