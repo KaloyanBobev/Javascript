@@ -7,9 +7,10 @@ musicApp.factory('artistData', function ($resource) {
     return {
         getArtist: function (id) {
             return resource.get({ id: id });
-           
-
+        },
+        saveArtist: function (artist) {
+            artist.id = '999';
+            resource.save(artist);
         }
-
     }
 });

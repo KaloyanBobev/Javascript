@@ -1,9 +1,7 @@
 ﻿'use strict';
 
 musicApp.controller('EditArtistController',
-    function EditArtistController($scope) {
-
-        
+    function EditArtistController($scope,artistData) {
 
         $scope.saveArtist = saveArtist;
 
@@ -11,7 +9,8 @@ musicApp.controller('EditArtistController',
 
         function saveArtist(artist, newArtistForm) {
             if (newArtistForm.$valid) {
-                alert(artist.name + ' ' + artist.created);
+                artistData.saveArtist(artist);
+                alert('Artist '+ artist.name + ' ' + artist.created);
             }
             else {
                 alert('Invlaid');
