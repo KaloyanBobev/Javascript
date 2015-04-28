@@ -2,7 +2,7 @@
 
 musicApp.factory('artistData', function ($resource) {
     
-    var resource = $resource('http://kaloyanbobev.com/demos/musicArtist/data/artist/ :id', {id:'@id'})
+    var resource = $resource('http://kaloyanbobev.com/demos/musicArtist/data/artist/:id'+'.json'', {id:'@id'})
 
     return {
         getArtist: function (id) {
