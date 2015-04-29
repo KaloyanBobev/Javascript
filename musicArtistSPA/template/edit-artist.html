@@ -1,0 +1,60 @@
+﻿        <div class="jumbotron" ng-controller="EditArtistController">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="form-horizontal" name="newArtistForm">
+                        <h1>Artist</h1>
+                        <fieldset>
+                            <legend>Main Inforamtion</legend>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="name">Name</label>
+                                <div class="col-lg-10">
+                                    <input type="text" required="required" placeholder="Name" id="name" class="form-control form-validation" ng-model="artist.name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="image">Image</label>
+                                <div class="col-lg-10">
+                                    <input type="text" required="required" placeholder="Image URL" id="image" ng-pattern="/\.(gif|jpg|jpeg|tiff|png)$/i" class="form-control form-validation" ng-model="artist.image" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="date">Created</label>
+                                <div class="col-lg-10">
+                                    <input type="text" required="required" ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="Date Created (dd/mm/yy)" id="date" class="form-control form-validation" ng-model="artist.created" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Additional Information</legend>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="location">Location</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="Location" id="location" class="form-control" ng-model="artist.additionalInformation.location" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="albums">Albums</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="Albums" id="albums" class="form-control" ng-model="artist.additionalInformation.albums" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="singles">Singles</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="Singles" id="singles" class="form-control" ng-model="artist.additionalInformation.singles" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <div class="pull-right">
+                                <button class="btn btn-default" type="submit" ng-disabled="newArtistForm.$invalid" ng-click="saveArtist(artist,newArtistForm)">Save</button>
+                                <button class="btn btn-default" type="reset" ng-click="cancel()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 image-container">
+                    <img src="" ng-src="{{artist.image}}" alt="Prevew Image" />
+                </div>
+            </div>
+        </div>

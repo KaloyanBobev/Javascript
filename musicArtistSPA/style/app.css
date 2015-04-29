@@ -1,0 +1,24 @@
+.navbar{
+     background-color:green;
+}
+
+.image-container img {
+    width:100%;
+    height:100%;
+}
+
+.green-text{
+    color:green;
+}
+
+.gray-background{
+    background-color:lightgray;
+}
+
+input.ng-invalid.ng-dirty.form-validation{
+    background-color:lightcoral;
+}
+
+input.ng-valid.ng-dirty.form-validation{
+    background-color:lightgreen;
+}
