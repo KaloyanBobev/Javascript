@@ -1,10 +1,10 @@
 ﻿'use strict';
 
 musicApp.controller('ArtistDetailsController',
-    function ArtistDetailsController($scope,artistData) {
+    function ArtistDetailsController($scope,$routeParams,artistData) {
    
 
-        $scope.artist = artistData.getArtist(1);
+        $scope.artist = artistData.getArtist($routeParams.id);
 
     $scope.hideInformation = true;
     $scope.showInfoText = "Show";

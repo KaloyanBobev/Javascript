@@ -29,7 +29,7 @@
                                 </div>
                                  <ul class="nav nav-tabs">
                                     <li ng-repeat="album in artist.albums | orderBy:sort | filter:search">
-                                        <a href="#album-{{album.id}}" ng-class="greenTextClass" data-toggle="tab">{{ album.name }}  ({{album.rating}})</a>
+                                        <a href="#album-{{album.id}}" target="_self" ng-class="greenTextClass" data-toggle="tab">{{ album.name }}  ({{album.rating}})</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">

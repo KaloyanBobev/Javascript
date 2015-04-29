@@ -11,6 +11,9 @@ musicApp.factory('artistData', function ($resource) {
         saveArtist: function (artist) {
             artist.id = '999';
             resource.save(artist);
+        },
+        getAllArtists: function () {
+           return resource.query();
         }
     }
 });

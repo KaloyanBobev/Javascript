@@ -5,13 +5,13 @@ var musicApp = angular
     .config(function ($routeProvider) {
         $routeProvider
             .when('/home', {
-                templateUrl: '/template/artist-details.html'
+                templateUrl:'template/list-artists.html'
             })
             .when('/edit-artist', {
-                templateUrl: '/template/edit-artist.html'
+                templateUrl: 'template/edit-artist.html'
             })
         .when('/artist-details/:id', {
-            templateUrl: '/template/artist-details.html'
+            templateUrl: 'template/artist-details.html'
         })
         .otherwise({ redirectTo: '/home' })
     })
