@@ -13,7 +13,7 @@ musicApp.controller('EditArtistController',
                 alert('Artist '+ artist.name + ' ' + artist.created);
             }
             else {
-                alert('Invlaid');
+                alert('Invalid');
             }
         }
 
