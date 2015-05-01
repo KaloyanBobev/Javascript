@@ -2,7 +2,12 @@
 
 musicApp.directive('searchArtists', function () {
     return {
-        template:'<div>Saerch: </div>'
+        restrict:'EA',
+        templateUrl: 'template/directives/search-artist.html',
+        replace: true,
+        scope: {
+
+        }
 
     }
 })
