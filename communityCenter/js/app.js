@@ -10,5 +10,8 @@ var newspaperApp = angular
             .when('/photo-gallery', {
                 templateUrl: 'template/photo-gallery.html'
             })
+         .when('/contacts', {
+             templateUrl: 'template/contacts.html'
+         })
     })
     .constant('author', 'Kaloyan Bobev');
