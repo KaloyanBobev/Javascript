@@ -21,9 +21,23 @@
             <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#/history">История</a></li>
-                    <li><a href="#">Вестник Литературен глас</a></li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Печатни издания <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#">Вестник Литературен глас</a></li>
+                            <li class="divider"></li>
+                          <li><a href="#">Книги</a></li>
+                        </ul>
+                      </li>
                     <li><a href="#">Дейности</a></li>
-                    <li><a href="#/photo-gallery">Галерия</a></li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#/photo-gallery">Фото Галерия <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#">Награждавания</a></li>
+                            <li class="divider"></li>
+                          <li><a href="#">Детски изяви</a></li>
+                        </ul>
+                      </li>
                     <li><a href="#/contacts">Контакти</a></li>
                 </ul>
             </div>
