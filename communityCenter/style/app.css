@@ -6,17 +6,9 @@ img {
      
 }
 
-#bs-example-navbar-collapse-2 ul li a, nav div div a {
-    font-style: italic;
-    font-size: 1.5em;
-    font-weight: 900;
-}
 
-.dropdown a{
-    font-weight: 100;
-}
 
-#map-canvas { 
-    height: 300px;
-     margin: 0; 
-     padding: 0;}
+ #gmap_canvas img {
+            max-width: none!important;
+            background: none!important;
+        }
