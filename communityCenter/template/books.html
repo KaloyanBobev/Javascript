@@ -1,20 +1,29 @@
-﻿ <div class="jumbotron" ng-controller="BookDetailController">
-     <div class="row text-center">
-         <h3>Списък на издадените произведения</h3>
-         <hr />
-     </div>
-      <div class="row">
-         <div class="col-md-3"><strong> Автор </strong></div>
-         <div class="col-md-3"><strong> Заглавие </strong></div>
-         <div class="col-md-3"><strong> Жанр </strong></div>
-         <div class="col-md-3"><strong> Година на издаване </strong></div>
-     </div>
-     <div class="row">
-         <div class="col-md-3"> {{ book.author }}</div>
-         <div class="col-md-3"> {{ book.name }}</div>
-         <div class="col-md-3"> {{ book.author }}</div>
-         <div class="col-md-3"> {{ book.date }}</div>
-     </div>
-    
+﻿<div class="jumbotron" ng-controller="BookDetailController" ng-cloak>
+    <div class="row text-center">
+        <h3>Списък произведения</h3>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-2 text-left"><strong>Номер</strong></div>
+        <div class="col-md-2 text-left"><strong>Автор</strong></div>
+        <div class="col-md-3 text-center"><strong>Заглавие</strong></div>
+        <div class="col-md-3 text-center"><strong>Жанр</strong></div>
+        <div class="col-md-2  text-right"><strong>Година на издаване</strong></div>
+    </div>
 
- </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="book in books">
+            <div class="row">
+                <div class="col-md-2 text-left">{{ book.id }}</div>
+                <div class="col-md-2 text-left">{{ book.author }}</div>
+                <div class="col-md-3 text-center">{{ book.name }}</div>
+                <div class="col-md-3 text-center">{{ book.species }}</div>
+                <div class="col-md-2 text-right">{{ book.date }}</div>
+            </div>
+        </li>
+    </ul>
+
+
+
+
+</div>
