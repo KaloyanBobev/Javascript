@@ -1,15 +1,15 @@
 ﻿'use strict';
 
-newspaperApp.controller('BookDetailController', function BookDetailController($scope, $routeParams, bookData) {
+newspaperApp.controller('BookDetailController',
+    function BookDetailController($scope) {
 
-    book = {
-        "id": 1,
-        "author": "Иван Дамянов",
-        "name": "Влакът на детството",
-        "gender": "стихове за деца и възрастни",
-        "date": "юли 2011 г."
-
+   var book = {
+        id: 1,
+        author: "Иван Дамянов",
+        name: "Влакът на детството",
+        gender: "стихове за деца и възрастни",
+        date: "юли 2011 г."
     }
 
-    $scope.book = bookData.getBook($routeParams.id);
+   $scope.book = book;
 });

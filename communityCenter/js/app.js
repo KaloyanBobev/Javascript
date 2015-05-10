@@ -10,8 +10,11 @@ var newspaperApp = angular
              .when('/books', {
                  templateUrl: 'template/books.html'
              })
-            .when('/history', {
-                templateUrl: 'template/history.html'
+            .when('/children-work', {
+                templateUrl: 'template/children-work.html'
+            })
+            .when('/book-cover', {
+                templateUrl: 'template/book-cover.html'
             })
             .when('/photo-gallery', {
                 templateUrl: 'template/photo-gallery.html'
