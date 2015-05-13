@@ -7,6 +7,9 @@ var newspaperApp = angular
             .when('/home', {
                 templateUrl: 'template/home.html'
             })
+            .when('/newspapers', {
+                templateUrl: 'template/newspapers.html'
+            })
              .when('/books', {
                  templateUrl: 'template/books.html'
              })

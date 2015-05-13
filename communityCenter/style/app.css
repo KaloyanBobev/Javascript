@@ -1,8 +1,11 @@
 body {
     background-color: #7D8B6A;
-    font-size: 2.5em;
+    color:black;
 }
 
+.font-big{
+    font-size:larger;
+}
 .sizes {
     width: 260px;
     height: 170px;
