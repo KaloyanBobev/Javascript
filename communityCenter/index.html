@@ -1,17 +1,17 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <meta name="description" content="Newspeper Litaraturen glas">
-    <meta name="keywords" content="Р§РёС‚Р°Р»РёС‰Рµ, С‡РёС‚Р°Р»РёС‰Р°, РЎС‚Р°СЂР° Р—Р°РіРѕСЂР°, Р’РµСЃС‚РЅРёРє, Р»РёС‚РµСЂР°С‚СѓСЂРµРЅ РіР»Р°СЃ, РЎС‚Р°СЂРѕР·Р°РіРѕСЂСЃРєРё РІРµСЃС‚РЅРёРє, Р”Р°СЃРєР°Р» РџРµС‚СЉСЂ РРІР°РЅРѕРІ">
+    <meta name="keywords" content="литературен глас, Даскал Петър Иванов, Читалище, читалища,поезия,стихиотворения, Вестник, весници, Старозагорски вестник ">
     <meta name="author" content="Kaloyan Bobev">
-    <title>Р§РёС‚Р°Р»РёС‰Рµ вЂћР”Р°СЃРєР°Р» РџРµС‚СЉСЂ РРІР°РЅРѕРІвЂќ</title>
+    <title>Читалище Даскал Петър Иванов и Вестник Литературен глас</title>
     <link rel="stylesheet" href="style/bootstrap.min.css" />
     <link rel="stylesheet" href="style/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="style/app.css" />
+    <link rel="icon" href="img/favicon.ico" />
 </head>
 <body ng-app="newspaperApp" ng-controller="PageController" ng-cloak>
-    
     <nav class="navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -21,39 +21,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">РќР°С‡Р°Р»Рѕ</a>
+                <a href="#" class="navbar-brand">Начало</a>
             </div>
-
             <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">РџРµС‡Р°С‚РЅРё РёР·РґР°РЅРёСЏ <span class="caret"></span></a>
+                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">Печатни издания <span class="caret"></span></a>
                         <ul role="menu" class="dropdown-menu">
-                            <li class="font-big"><a href="#/newspapers">Р’РµСЃС‚РЅРёРє Р›РёС‚РµСЂР°С‚СѓСЂРµРЅ РіР»Р°СЃ</a></li>
+                            <li class="font-big"><a href="#/newspapers">Вестник Литературен глас</a></li>
                             <li class="divider"></li>
-                            <li class="font-big"><a href="#/books">РљРЅРёРіРё Рё Р»РёС‚РµСЂР°С‚РёСѓСЂРЅРё РїСЂРѕРёР·РІРµРґРµРЅРёСЏ</a></li>
+                            <li class="font-big"><a href="#/books">Книги и литератиурни произведения</a></li>
                         </ul>
                     </li>
-                    <li class="font-big"><a href="#">Р”РµР№РЅРѕСЃС‚Рё</a></li>
+                    <li class="font-big"><a href="#">Дейности</a></li>
                     <li class="dropdown">
-                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#/photo-gallery">Р¤РѕС‚Рѕ Р“Р°Р»РµСЂРёСЏ <span class="caret"></span></a>
+                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#/photo-gallery">Фото Галерия <span class="caret"></span></a>
                         <ul role="menu" class="dropdown-menu">
-                            <li class="font-big"><a href="#/book-cover">РЎРЅРёРјРєРё РЅР° РєРѕСЂРёС†Рё Рё РІРµСЃС‚РЅРёС†Рё</a></li>
+                            <li class="font-big"><a href="#/book-cover">Снимки на корици и вестници</a></li>
                             <li class="divider"></li>
-                            <li class="font-big"><a href="#/children-work">Р”РµС‚СЃРєРё РёР·СЏРІРё</a></li>
+                            <li class="font-big"><a href="#/children-work">Детски изяви</a></li>
                         </ul>
                     </li>
-                     <li class="font-big"><a href="#/contacts">РљРѕРЅС‚Р°РєС‚Рё</a></li>
+                    <li class="font-big"><a href="#/contacts">Контакти</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-   
     <div class="container" ng-view>
     </div>
-
-    <footer class="text-center">
+    <footer class="text-center te">
         <hr />
         <small>Author: {{ author }} , Year: {{ year }} </small>
     </footer>
@@ -64,10 +60,9 @@
     <script src="lib/angular/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/PageController.js"></script>
-    <script src="js/controllers/BookDetailController.js"></script>.
+    <script src="js/controllers/BookDetailController.js"></script>
+    .
     <script src="js/services/bookData.js"></script>
-
-
 </body>
 </html>
 
