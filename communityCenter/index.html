@@ -13,49 +13,56 @@
 </head>
 <body ng-app="newspaperApp" ng-controller="PageController" ng-cloak>
     <div class="row">
-        <div class="col-md-4 col-md-offset-1">
+        <div class="col-md-4 col-md-offset-1 logo">
             <h1>Литературен глас</h1>
         </div>
     </div>
-    <nav class="navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button data-target="#bs-example-navbar-collapse-2" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand">Начало</a>
+    <div class="row">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button data-target="#bs-example-navbar-collapse-2" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Начало</a>
+                </div>
+                <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">Печатни издания <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li class="font-big"><a href="#/newspapers">Вестник Литературен глас</a></li>
+                                <li class="divider"></li>
+                                <li class="font-big"><a href="#/books">Книги и литератиурни произведения</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#/photo-gallery">Фото Галерия <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li class="font-big"><a href="#/book-cover">Снимки на корици и вестници</a></li>
+                                <li class="divider"></li>
+                                <li class="font-big"><a href="#/children-work">Детски изяви</a></li>
+                            </ul>
+                        </li>
+                        <li class="font-big"><a href="#/contacts">Контакти</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">Печатни издания <span class="caret"></span></a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li class="font-big"><a href="#/newspapers">Вестник Литературен глас</a></li>
-                            <li class="divider"></li>
-                            <li class="font-big"><a href="#/books">Книги и литератиурни произведения</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#/photo-gallery">Фото Галерия <span class="caret"></span></a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li class="font-big"><a href="#/book-cover">Снимки на корици и вестници</a></li>
-                            <li class="divider"></li>
-                            <li class="font-big"><a href="#/children-work">Детски изяви</a></li>
-                        </ul>
-                    </li>
-                    <li class="font-big"><a href="#/contacts">Контакти</a></li>
-                </ul>
-            </div>
+        </nav>
+    </div>
+    <div class="row ">
+        <div class="many-books col-md-4 col-md-offset-6 hidden-sm hidden-xs">
+            <img src="img/many-books.jpg" />
         </div>
-    </nav>
+    </div>
     <div class="container" ng-view>
     </div>
     <footer class="text-center te">
         <hr />
-        <small>Author: {{ author }} , Year: {{ year }} </small>
+        <small>Всички права запазени. Автор: {{ author }} , Година: {{ year }} </small>
     </footer>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>

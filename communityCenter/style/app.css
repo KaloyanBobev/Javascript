@@ -9,20 +9,26 @@ body {
     src: url('../fonts/TTWPGOTT.ttf') format('truetype');
 }
 
-h1 {
+.logo {
     font-family: TTWPGOTT;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 900;
+    text-shadow:10px 5px 5px #eee;
 }
 
-.newspaper-font{
+.newspaper-font {
     font-family: TTWPGOTT;
     font-style: italic;
-    font-size:1.5em;
+    font-size: 1.5em;
 }
 
 .font-big {
     font-size: larger;
+}
+
+.many-books {
+    width: 35%;
+    height: 10%;
 }
 
 .sizes {
