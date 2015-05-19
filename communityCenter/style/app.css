@@ -52,7 +52,7 @@ img {
 a {
     color: black;
 }
- #map_canvas img {
-            max-width: none!important;
-            background: none!important;
+ .mapCanvas {
+            max-width: 100px!important;
+            background: 100px!important;
         }
