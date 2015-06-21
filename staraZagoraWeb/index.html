@@ -9,13 +9,12 @@
     <title>website Stara Zagora </title>
     <link rel="stylesheet " href="style/bootstrap.min.css " />
     <link rel="stylesheet " href="style/bootstrap-theme.min.css ">
-    <link rel="stylesheet " href="style
-/app.css ">
+    <link rel="stylesheet " href="style/app.css ">
 </head>
 
-<body ng-app="" ng-controller=" " ng-claok>
+<body ng-app="websiteApp" ng-controller="PageController" ng-claok>
     <div class="row logo">
-        <div class="col-md-4 ">
+        <div class="col-md-3 ">
             <img src="img/SZ-logo.png" alt="Stara Zagora Logo">
         </div>
         <div class="row logo">
@@ -33,34 +32,32 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-brand">За Стара Загора</a>
+                        <a href="#/home" class="navbar-brand">За Стара Загора</a>
                     </div>
                     <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">Забележителности <span class="caret"></span></a>
+                                <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#/landmarks">Забележителности<span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li class="font-big"><a href="#/newspapers">Римски разкопки</a></li>
+                                    <li class="font-big"><a href="#/romanExcavations">Римски разкопки</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Тракийски гробници и светилища</a></li>
+                                    <li class="font-big"><a href="#/museum">Музеи</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Музеи</a></li>
+                                    <li class="font-big"><a href="#/monuments">Паметници</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Паметници</a></li>
-                                    <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Зоологическа градина</a></li>
+                                    <li class="font-big"><a href="#/zoopark">Зоологическа градина</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle font-big" href="#">Градове <span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li class="font-big"><a href="#/newspapers">Стара Загора</a></li>
+                                    <li class="font-big"><a href="#">Стара Загора</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/newspapers">Нова Загора</a></li>
+                                    <li class="font-big"><a href="#">Нова Загора</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Мъглиж</a></li>
+                                    <li class="font-big"><a href="#">Мъглиж</a></li>
                                     <li class="divider"></li>
-                                    <li class="font-big"><a href="#/books">Чирпан</a></li>
+                                    <li class="font-big"><a href="#">Чирпан</a></li>
                                 </ul>
                             </li>
                             <li class="font-big">
@@ -71,9 +68,18 @@
                 </div>
             </nav>
         </div>
+        <div class="container" ng-view>
+        </div>
+        <footer class="text-center">
+            <hr />
+            <small> {{copyright}}  Автор: {{author}}, Година:{{year}}</small>
+        </footer>
         <script src="lib/jquery.min.js"></script>
         <script src="lib/bootstrap.js"></script>
         <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/PageController.js"></script>
 </body>
 
 </html>
