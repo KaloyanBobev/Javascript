@@ -1,0 +1,15 @@
+<div class="row" ng-controller="ZooparkController">
+    <div class="row jumbotron" ng-repeat="zoo in zoopark">
+        <div class="col-md-6">
+            <h3 class="text-center"><strong>{{zoo.name}}</strong></h3>
+            <h3>Адрес: {{zoo.address}}</h3>
+            <button class="btn btn-sm pull-right" ng-click="showText()">Info</button>
+            <div ng-hide="hideText">
+                <p>{{zoo.text}}</p>
+            </div>
+        </div>
+        <div class="col-md-6 image-container">
+            <img class="" src="img/zoopark.jpg" alt="Zoopark"></img>
+        </div>
+    </div>
+</div>

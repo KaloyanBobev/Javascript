@@ -1,0 +1,15 @@
+<div class="row" ng-controller="RomanExcavationsController">
+    <div class="row jumbotron" ng-repeat="roman in romanExcav">
+        <div class="col-md-6 ">
+            <h2 class="text-left"><strong>{{roman.name}}</strong></h2>
+            <h3>Адрес: {{roman.address}}</h3>
+            <button class="btn btn-sm pull-right" ng-click="showText()">Info</button>
+            <div ng-hide="hideText">
+                <p>{{roman.text}}</p>
+            </div>
+        </div>
+        <div class="col-md-6 image-container">
+            <img class="" src="{{roman.image}}" alt="Image"></img>
+        </div>
+    </div>
+</div>
