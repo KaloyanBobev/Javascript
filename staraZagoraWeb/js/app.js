@@ -23,6 +23,9 @@ var websiteApp = angular
             .when('/zoopark', {
                 templateUrl: 'template/zoopark.html'
             })
+            .when('/cites', {
+                templateUrl: 'template/cites.html'
+            })
             .otherwise({
                 redirectTo: '/home'
             })
