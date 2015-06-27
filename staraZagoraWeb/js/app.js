@@ -29,6 +29,9 @@ var websiteApp = angular
             .when('/stara-zagora', {
                 templateUrl: 'template/city-stara-zagora.html'
             })
+            .when('/nova-zagora', {
+                templateUrl: 'template/city-nova-zagora.html'
+            })
             .otherwise({
                 redirectTo: '/home'
             })

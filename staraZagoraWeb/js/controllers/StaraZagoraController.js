@@ -17,7 +17,7 @@ websiteApp.controller('StaraZagoraController',
         $scope.showInfo = showInfo;
 
         function showInfo() {
-            if (hideInfo === true) {
+            if ($scope.hideInfo === true) {
                 $scope.hideInfo = false;
             } else {
                 $scope.hideInfo = true;
