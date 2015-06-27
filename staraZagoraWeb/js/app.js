@@ -26,6 +26,9 @@ var websiteApp = angular
             .when('/cites', {
                 templateUrl: 'template/cites.html'
             })
+            .when('/stara-zagora', {
+                templateUrl: 'template/city-stara-zagora.html'
+            })
             .otherwise({
                 redirectTo: '/home'
             })
