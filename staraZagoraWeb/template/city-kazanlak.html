@@ -1,0 +1,20 @@
+<div class="row" ng-controller="KazanlakController">
+    <div class="row jumbotron">
+        <div class="col-md-6 ">
+            <h2 class="text-center"><strong>{{kazanlakInfo.name}}</strong></h2>
+            <button class="btn btn-sm pull-right" ng-click="showInfo()">Info</button>
+            <div ng-hide="hideInfo">
+                <div class="row">
+                    <ul class="col-md-10 list-group">
+                        <li class="list-group-item text-left">Географска дължина {{kazanlakInfo.location.longitude}}</li>
+                        <li class="list-group-item text-left">Географска ширина {{kazanlakInfo.location.latitude}}</li>
+                    </ul>
+                </div>
+                <p>{{kazanlakInfo.teritory}}</p>
+            </div>
+        </div>
+        <div class="col-md-6 image-container">
+            <img src="{{kazanlakInfo.image}}" alt="City Kazanlak"></img>
+        </div>
+    </div>
+</div>

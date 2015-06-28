@@ -32,6 +32,12 @@ var websiteApp = angular
             .when('/nova-zagora', {
                 templateUrl: 'template/city-nova-zagora.html'
             })
+            .when('/kazanlak', {
+                templateUrl: 'template/city-kazanlak.html'
+            })
+            .when('/chirpan', {
+                templateUrl: 'template/city-chirpan.html'
+            })
             .otherwise({
                 redirectTo: '/home'
             })
