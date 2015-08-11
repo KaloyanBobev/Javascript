@@ -19,5 +19,4 @@
     }
     leftNav.appendChild(ul);
 
-
 })();
