@@ -20,11 +20,30 @@
     }
     
     li a {
+        display: block;
+        position: relative;
         text-decoration: none;
         display: inline-block;
         color: gray;
         font-family: Impact, Charcoal, sans-serif;
         font-size: 1.2em;
+    }
+    
+    li a:hover {
+        color: black;
+        cursor: pointer;
+    }
+    
+    .tv_menu,
+    .photo_menu,
+    .computer_menu {
+        display: none;
+        clear: both;
+        padding: 0;
+        margin: 0;
+        color: gray;
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 0.9em;
     }
     
     .base_nav {
