@@ -4,6 +4,7 @@ body {
     color: black;
 }
 
+
 @font-face {
     font-family: TTWPGOTT;
     src: url('../fonts/TTWPGOTT.ttf') format('truetype');
@@ -17,9 +18,9 @@ body {
 }
 
 .newspaper-font {
-    font-family: TTWPGOTT;
+    font-family: san-serif;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .font-big {
