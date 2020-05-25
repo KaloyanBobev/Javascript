@@ -218,6 +218,10 @@ let printingPress = (function () {
         id: 211,
         month: `${month.mar} - ${month.apr}`,
         year: year.year2020
+    }, {
+        id: 212,
+        month: `${month.may} - ${month.jun}`,
+        year: year.year2020
     }];
 
     let df = document.createDocumentFragment();
