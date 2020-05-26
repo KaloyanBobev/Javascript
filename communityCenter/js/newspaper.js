@@ -239,8 +239,8 @@ let printingPress = (function () {
             li.addClass(`list-group-item `)
                 .addClass(`text-center`);
             a.attr(`href`, link)
-                .attr(`target`, `_blank`);
-            // .attr('download', `${paper}${newspapers[i].id}.pdf`);
+                .attr(`target`, `_blank`)
+            .attr('download', `${paper}${newspapers[i].id}.pdf`);
             a.text(`${name} ${newspapers[i].id} ${newspapers[i].month} ${newspapers[i].year}`);
             a.appendTo(li);
             li.clone()
