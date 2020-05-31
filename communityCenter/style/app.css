@@ -14,7 +14,7 @@ body {
     font-family: TTWPGOTT;
     font-style: italic;
     font-weight: 900;
-    text-shadow:10px 5px 5px #eee;
+    text-shadow:1.5em 0.4em 0.4em #eee;
 }
 
 .newspaper-font {
@@ -33,8 +33,8 @@ body {
 }
 
 .sizes {
-    width: 260px;
-    height: 170px;
+    width: 19em;
+    height: 14em;
 }
 
 .jumbotron {
@@ -53,13 +53,16 @@ img {
 .red{
     color:red;
 }
-
+.googleMap{
+    width:100%;
+    height:400px;
+}
 a {
     color: black;
-}
+    
 .googleMap{
-    width:80%;
-    height:80%;
+    width:60%;
+    height:60%;
 } 
  iframe{
     width:100%;
@@ -67,3 +70,5 @@ a {
     border:0;
     zoom: 1;
 }
+        
+        
