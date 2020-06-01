@@ -1,5 +1,4 @@
 let printingPress = (function () {
-    let name = `Вестник номер`;
 
     let month = {
         jan: `Януари`,
@@ -16,6 +15,7 @@ let printingPress = (function () {
         dec: `Декември`,
 
     };
+
     let year = {
         year2012: 2012,
         year2013: 2013,
@@ -28,9 +28,8 @@ let printingPress = (function () {
         year2020: 2020,
 
     }
-    let newspapers = [];
 
-    newspapers = [{
+    let newspapers = [{
         id: 163,
         month: month.dec,
         year: year.year2012
@@ -224,6 +223,7 @@ let printingPress = (function () {
         year: year.year2020
     }];
 
+    let name = `Вестник номер`;
     let df = document.createDocumentFragment();
     let $listgroup = $(`.list-group`);
     let li = $(`<li>`);
@@ -240,7 +240,7 @@ let printingPress = (function () {
                 .addClass(`text-center`);
             a.attr(`href`, link)
                 .attr(`target`, `_blank`)
-            .attr('download', `${paper}${newspapers[i].id}.pdf`);
+                .attr('download', `${paper}${newspapers[i].id}.pdf`);
             a.text(`${name} ${newspapers[i].id} ${newspapers[i].month} ${newspapers[i].year}`);
             a.appendTo(li);
             li.clone()
@@ -249,7 +249,6 @@ let printingPress = (function () {
         console.log(df);
         $listgroup.append(df);
     }
-
 
     createList();
 }());
