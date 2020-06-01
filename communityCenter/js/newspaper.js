@@ -234,7 +234,7 @@ let printingPress = (function () {
 
 
     function createList() {
-        for (let i = newspapers.length - 1; i > 0; i -= 1) {
+        for (let i = newspapers.length - 1; i >= 0; i -= 1) {
             link = `../data/${paper}${newspapers[i].id}.pdf`;
             li.addClass(`list-group-item `)
                 .addClass(`text-center`);
