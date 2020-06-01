@@ -29,7 +29,6 @@ let printingPress = (function () {
 
     }
 
-
     let newspapers = [{
         id: 163,
         month: month.dec,
