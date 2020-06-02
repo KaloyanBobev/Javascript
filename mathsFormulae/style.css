@@ -1,0 +1,22 @@
+body {
+    background-color: azure;
+} 
+
+ #menubar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #menubar>li {
+            display: inline-block;
+        }
+
+        #menubar>li>ul>li {
+            display: block;
+        }
+
+        #info{
+           margin-top:5%;
+        }

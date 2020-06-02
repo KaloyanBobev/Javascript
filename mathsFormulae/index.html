@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Formulae</title>
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="./lib/vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav">
+            <ul id="menubar">
+                <li v-for="item in items">
+                    <div>
+                        <a href="#">{{ item.text }}</a>
+                    </div>
+                    <ul>
+                        <li v-for="figure in figures">
+                            <div>
+                                <a href="#">{{ figure.text }} </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>
+    </header>
+    <section>
+        <article id="info">
+            <div<h2>
+                {{header}}
+                </h2>
+                {{formula}}
+                </div>
+        </article>
+    </section>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
