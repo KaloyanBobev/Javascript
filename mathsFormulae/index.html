@@ -35,28 +35,52 @@
     </header>
     <section>
 
-        <article>
-            <form>
-                <fieldset>
-                    <legend>Perimeter</legend>
-                    <label for="tb-input" class="blue-text">Side A:</label>
-                    <input type="text" id="tb-input" name="sade-a" autocomplete="" />
-                    <div>Circle circumference
-                        <spam id="container" class="blue-text"> </spam>
+        <article id="accordion">
+            <h3>Perimeter of Square</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Square</legend>
+                        <label for="tb-input" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input" name="sade-a" autocomplete="" />
+                        <div>Circle circumference
+                            <spam id="container" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="info">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
                     </div>
-                </fieldset>
-            </form>
-            <div id="info">
-                <h2>
-                    {{header}}
-                </h2>
-
-                <div>{{information}}</div>
-                <div>
-                    <h3 class="blue-text">{{formula}}</h3>
+                    <div>{{explanation}}</div>
                 </div>
-                <div>{{explanation}}</div>
-
+            </div>
+            <h3>Perimeter of Circke</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Perimeter</legend>
+                        <label for="tb-input" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input" name="sade-a" autocomplete="" />
+                        <div>Circle circumference
+                            <spam id="container" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="info">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
             </div>
         </article>
     </section>

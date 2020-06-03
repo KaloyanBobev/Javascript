@@ -4,7 +4,6 @@ let nav = new Vue({
         items: [
             { text: `Perimeter` },
             { text: `Area` }
-
         ],
         figures: [
             { text: `Square` },
@@ -14,7 +13,6 @@ let nav = new Vue({
             { text: `Parallelogram` },
         ]
     },
-
 });
 
 $(document).ready(function() {
@@ -32,6 +30,7 @@ $(document).ready(function() {
         },
     });
 });
+
 let $sideA = $(`#tb-input`)
 $sideA.on("keyup", function() {
     let $val = $sideA.val();
@@ -40,9 +39,11 @@ $sideA.on("keyup", function() {
         container.text(`That is not a number!`);
     } else {
         container.text(` ${$val * 4}`);
-
     }
+});
 
+$(function() {
+    $("#accordion").accordion();
 });
 
 let info = new Vue({
