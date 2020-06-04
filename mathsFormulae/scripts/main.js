@@ -17,7 +17,6 @@ let nav = new Vue({
 
 $(document).ready(function() {
     $('#menubar').menu();
-
     $('#menubar').menu({
         position: { my: 'left top', at: 'left bottom' },
         blur: function() {
@@ -68,6 +67,7 @@ let infoSquare = new Vue({
         explanation: `A is the length of one of the sides.`
     }
 });
+
 let infoCircle = new Vue({
     el: `#infoCircle`,
     data: {
