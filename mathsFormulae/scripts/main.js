@@ -31,10 +31,10 @@ $(document).ready(function() {
     });
 });
 
-let $sideA = $(`#tb-input`)
-let calc = $sideA.on("keyup", function() {
+let $sideA = $(`#tb-input-square`);
+$sideA.on("keyup", function() {
     let $val = $sideA.val();
-    let container = $(`#container`);
+    let container = $(`#container-square`);
     if (isNaN($val)) {
         container.text(`That is not a number!`);
     } else {
@@ -42,17 +42,38 @@ let calc = $sideA.on("keyup", function() {
     }
 });
 
+let $radius = $(`#tb-input-radius`);
+$radius.on("keyup", function() {
+    let $val = $radius.val();
+    let container = $(`#container-circle`);
+    if (isNaN($val)) {
+        container.text(`That is not a number!`);
+    } else {
+        container.text(` ${$val * 2*Math.PI}`);
+    }
+});
 
 $(function() {
     $("#accordion").accordion();
+    let container = $(`#container-circle`);
+
 });
 
-let info = new Vue({
-    el: `#info`,
+let infoSquare = new Vue({
+    el: `#infoSquare`,
     data: {
-        header: `The perimeter of Square`,
+        header: `The Perimeter of Square`,
         information: `A Square is a regular rectangle but have four equal sides A with 90 degrees angles `,
         formula: `P = 4A`,
         explanation: `A is the length of one of the sides.`
+    }
+});
+let infoCircle = new Vue({
+    el: `#infoCircle`,
+    data: {
+        header: `The perimeter of Cirlce`,
+        information: `Perimeter is a length around the circle `,
+        formula: `P = 2πR`,
+        explanation: `π is constant  equal on 3,1415926535, R is a radius of a circle .`
     }
 });
