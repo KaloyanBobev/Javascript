@@ -30,3 +30,7 @@ section {
 fieldset {
     width: 30%;
 }
+
+#accordion>h3 {
+    background-color: lightblue;
+}

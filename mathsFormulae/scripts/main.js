@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 
 let $sideA = $(`#tb-input`)
-$sideA.on("keyup", function() {
+let calc = $sideA.on("keyup", function() {
     let $val = $sideA.val();
     let container = $(`#container`);
     if (isNaN($val)) {
@@ -41,6 +41,7 @@ $sideA.on("keyup", function() {
         container.text(` ${$val * 4}`);
     }
 });
+
 
 $(function() {
     $("#accordion").accordion();
