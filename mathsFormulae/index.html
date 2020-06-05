@@ -24,6 +24,8 @@
                             <a href="#tb-input-square">Square</a></li>
                         <li>
                             <a href="#tb-input-radius">Circle</a></li>
+                        <li>
+                            <a href="#tb-input-triangle">Triangle</a></li>
                     </ul>
                 </li>
                 <li class="ui-state-disabled">Area</li>
@@ -84,6 +86,38 @@
                     </fieldset>
                 </form>
                 <div id="infoCircle">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+
+            <h3>Perimeter of Triangle</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Triangle</legend>
+                        <label for="tb-input-triangle-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-triangle-a" name="tb-input-triangle-a" autocomplete="" />
+                        <br>
+                        <label for="tb-input-triangle-b" class="blue-text">Side B:</label>
+                        <input type="text" id="tb-input-triangle-b" name="tb-input-triangle-b" autocomplete="" />
+                        <br>
+                        <label for="tb-input-triangle-c" class="blue-text">Side C:</label>
+                        <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" autocomplete="" />
+                        <br>
+                        <input type="button" value="Calc" id="btn-trianlge">
+                        <div>Circle circumference
+                            <spam id="container-triangle" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoTriangle">
                     <h2>
                         {{header}}
                     </h2>

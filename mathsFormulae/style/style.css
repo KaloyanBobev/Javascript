@@ -7,6 +7,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: lightcoral;
+    color: white;
+    font-size: large;
 }
 
 #menubar>li {
@@ -15,6 +18,11 @@ body {
 
 #menubar>li>ul>li {
     display: block;
+    text-decoration: none;
+}
+
+#menubar>li>ul>li>a {
+    text-decoration: none;
 }
 
 section {
