@@ -30,33 +30,25 @@ $(document).ready(function() {
     });
 });
 
-let $sideA = $(`#tb-input-square`);
-$sideA.on("keyup", function() {
-    let $val = $sideA.val();
-    let container = $(`#container-square`);
-    if (isNaN($val)) {
-        container.text(`That is not a number!`);
-    } else {
-        container.text(` ${$val * 4}`);
-    }
-});
-
-let $radius = $(`#tb-input-radius`);
-$radius.on("keyup", function() {
-    let $val = $radius.val();
-    let container = $(`#container-circle`);
-    if (isNaN($val)) {
-        container.text(`That is not a number!`);
-    } else {
-        container.text(` ${$val * 2*Math.PI}`);
-    }
-});
-
 $(function() {
     $("#accordion").accordion();
     let container = $(`#container-circle`);
 
 });
+
+function calculate(id, container, formula) {
+    id.on("keyup", function() {
+        let $val = id.val();
+        if (isNaN($val)) {
+            container.text(`That is not a number!`);
+        } else {
+            container.text(formula * $val);
+        }
+    });
+}
+
+calculate($(`#tb-input-square`), $(`#container-square`), 4);
+calculate($(`#tb-input-radius`), $(`#container-circle`), 2 * Math.PI);
 
 let infoSquare = new Vue({
     el: `#infoSquare`,
