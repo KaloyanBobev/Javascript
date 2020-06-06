@@ -16,45 +16,38 @@
 
 <body>
     <header>
-        <div id="nav">
-            <ul id="menubar">
-                <li>Perimeter
-                    <ul>
-                        <li>
-                            <a href="#tb-input-square">Square</a></li>
-                        <li>
-                            <a href="#tb-input-radius">Circle</a></li>
-                        <li>
-                            <a href="#tb-input-triangle">Triangle</a></li>
-                    </ul>
-                </li>
-                <li class="ui-state-disabled">Area</li>
-
-                <!-- <li v-for="item in items">
-                    <div>
-                        <a href="#">{{ item.text }}</a>
-                    </div>
-                    <ul>
-                        <li v-for="figure in figures">
-                            <div>
-                                <a href="#">{{ figure.text }} </a>
-                            </div>
-                        </li>
-                    </ul>
-                </li> -->
-            </ul>
-            </nav>
+        <nav>
+            <div id="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Perimeter</a>
+                        <ul>
+                            <li>
+                                <a href="#perimeter-square">Square</a></li>
+                            <li>
+                                <a href="#perimeter-circle">Circle</a></li>
+                            <li>
+                                <a href="#perimeter-triangle">Triangle</a></li>
+                            <li>
+                                <a href="#perimeter-rectangle">Rectangle</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="ui-state-disabled">Area</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <section>
         <article id="accordion">
-            <h3>Perimeter of Square</h3>
+            <h3 id="perimeter-square">Perimeter of Square</h3>
             <div>
                 <form>
                     <fieldset>
                         <legend>Square</legend>
                         <label for="tb-input-square" class="blue-text">Side A:</label>
                         <input type="text" id="tb-input-square" name="tb-input-square" autocomplete="" />
-                        <div>Circle circumference
+                        <div>Square circumference
                             <spam id="container-square" class="blue-text"> </spam>
                         </div>
                     </fieldset>
@@ -70,7 +63,7 @@
                     <div>{{explanation}}</div>
                 </div>
             </div>
-            <h3>Perimeter of Circle</h3>
+            <h3 id="perimeter-circle" class=" ">Perimeter of Circle</h3>
             <div>
                 <form>
                     <fieldset>
@@ -97,7 +90,7 @@
                 </div>
             </div>
 
-            <h3>Perimeter of Triangle</h3>
+            <h3 id="perimeter-triangle">Perimeter of Triangle</h3>
             <div>
                 <form>
                     <fieldset>
@@ -112,7 +105,7 @@
                         <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" autocomplete="" />
                         <br>
                         <input type="button" value="Calc" id="btn-trianlge">
-                        <div>Circle circumference
+                        <div>Triangle circumference
                             <spam id="container-triangle" class="blue-text"> </spam>
                         </div>
                     </fieldset>
@@ -128,6 +121,37 @@
                     <div>{{explanation}}</div>
                 </div>
             </div>
+
+            <h3 id="perimeter-rectangle">Perimeter of Rectangle</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Rectangle</legend>
+                        <label for="tb-input-rectangle-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-rectangle-a" name="tb-input-rectangle-a" autocomplete="" />
+                        <br>
+                        <label for="tb-input-rectangle-b" class="blue-text">Side B:</label>
+                        <input type="text" id="tb-input-rectangle-b" name="tb-input-rectangle-b" autocomplete="" />
+                        <br>
+
+                        <input type="button" value="Calc" id="btn-rectangle">
+                        <div>Rectangle circumference
+                            <spam id="container-rectangle" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoRectangle">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+
         </article>
     </section>
     <script src="./scripts/main.js"></script>
