@@ -15,20 +15,15 @@ let nav = new Vue({
     },
 });
 
-$(document).ready(function() {
-    $('#menubar').menu();
-    $('#menubar').menu({
-        position: { my: 'left top', at: 'left bottom' },
-        blur: function() {
-            $(this).menu('option', 'position', { my: 'left top', at: 'left bottom' });
-        },
-        focus: function(e, ui) {
-            if ($('#menubar').get(0) !== $(ui).get(0).item.parent().get(0)) {
-                $(this).menu('option', 'position', { my: 'left top', at: 'right top' });
-            }
-        },
-    });
-});
+$('#container li').hover(
+    function() {
+        $('ul', this).stop().slideDown(200);
+    },
+    function() {
+        $('ul', this).stop().slideUp(200);
+    }
+);
+
 
 $(function() {
     $("#accordion").accordion();
@@ -47,10 +42,10 @@ function calculateWithOneVariable(id, container, formula) {
     });
 };
 
-let btn = $(`#btn-trianlge`);
+let btnTriangle = $(`#btn-trianlge`);
 
-function calculateWitTriangle(sideA, sideB, sideC, container) {
-    btn.on("click", function() {
+function calculateTriangle(sideA, sideB, sideC, container) {
+    btnTriangle.on("click", function() {
         let $sideAVal = +sideA.val();
         let $sideBVal = +sideB.val();
         let $sideCVal = +sideC.val();
@@ -62,9 +57,28 @@ function calculateWitTriangle(sideA, sideB, sideC, container) {
     });
 };
 
+btnRectangle = $(`#btn-rectangle`);
+
+function calculateRectangle(sideA, sideB, container) {
+    btnRectangle.on("click", function() {
+        let $sideAVal = +sideA.val();
+        let $sideBVal = +sideB.val();
+        if (isNaN(sideA) && isNaN(sideB)) {
+            container.text(2 * ($sideAVal + $sideBVal));
+        }
+        if ($sideAVal === $sideBVal) {
+            container.text(`Lendth must be different than width!`);
+        } else {
+            container.text(`Input width and length!`);
+        }
+    });
+};
+
 calculateWithOneVariable($(`#tb-input-square`), $(`#container-square`), 4);
 calculateWithOneVariable($(`#tb-input-radius`), $(`#container-circle`), 2 * Math.PI);
-calculateWitTriangle($(`#tb-input-triangle-a`), $(`#tb-input-triangle-b`), $(`#tb-input-triangle-c`), $(`#container-triangle`));
+calculateTriangle($(`#tb-input-triangle-a`), $(`#tb-input-triangle-b`), $(`#tb-input-triangle-c`), $(`#container-triangle`));
+calculateRectangle($(`#tb-input-rectangle-a`), $(`#tb-input-rectangle-b`), $(`#container-rectangle`));
+
 let infoSquare = new Vue({
     el: `#infoSquare`,
     data: {
@@ -92,5 +106,15 @@ let infoTriangle = new Vue({
         information: `Perimeter is the sum of three sides of triagle`,
         formula: `P = A + B + C`,
         explanation: `A, B and C are the length of each of the sides.`
+    }
+});
+
+let infoRectangle = new Vue({
+    el: `#infoRectangle`,
+    data: {
+        header: `The Perimeter of Rectangle`,
+        information: `Perimeter is the sum of two times length and two times width `,
+        formula: `P =2(A + B) `,
+        explanation: `A is a length and B is a width.`
     }
 });
