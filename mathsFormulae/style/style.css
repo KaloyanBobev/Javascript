@@ -2,31 +2,66 @@ body {
     background-color: azure;
 }
 
-#menubar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: lightcoral;
-    color: white;
-    font-size: large;
+
+/* navigation */
+
+nav {
+    background: lightcoral;
+    border: 1px solid blue;
+    border-radius: 0.5em;
 }
 
-#menubar>li {
+nav ul {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
     display: inline-block;
+    position: relative;
 }
 
-#menubar>li>ul>li {
+nav ul li a {
+    color: #fff;
     display: block;
-    text-decoration: none;
+    font-size: 20px;
+    padding: 1em 1em;
+    transition: 0.3s linear;
 }
 
-#menubar>li>ul>li>a {
-    text-decoration: none;
+nav ul li a:hover {
+    background: #126d9b;
+    color: black;
 }
+
+nav ul li ul {
+    border-bottom: 5px solid blue;
+    display: none;
+    position: absolute;
+    width: 150%;
+}
+
+nav ul li ul li {
+    border-top: 1px solid #444;
+    display: block;
+}
+
+nav ul li ul li a {
+    background: #373737;
+    display: block;
+    padding: 0.7em 1em;
+}
+
+nav ul li ul li a:hover {
+    background: #126d9b;
+}
+
+
+/* section */
 
 section {
-    margin-top: 15%;
+    margin-top: 25%;
 }
 
 .blue-text {
