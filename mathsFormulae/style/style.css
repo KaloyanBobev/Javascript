@@ -9,7 +9,6 @@ nav {
     background: lightcoral;
     border: 1px solid blue;
     border-radius: 0.5em;
-    z-index: 1;
 }
 
 nav ul {
@@ -29,6 +28,7 @@ nav ul li a {
     font-size: 20px;
     padding: 1em 1em;
     transition: 0.3s linear;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -41,6 +41,7 @@ nav ul li ul {
     display: none;
     position: absolute;
     width: 150%;
+    z-index: 1;
 }
 
 nav ul li ul li {
@@ -62,7 +63,7 @@ nav ul li ul li a:hover {
 /* section */
 
 section {
-    margin-top: 25%;
+    margin-top: 5%;
 }
 
 .blue-text {
@@ -77,5 +78,4 @@ fieldset {
 
 #accordion>h3 {
     background-color: lightcoral;
-    z-index: -1;
 }

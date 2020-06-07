@@ -27,7 +27,7 @@ $('#container li').hover(
 
 $(function() {
     $("#accordion").accordion();
-    let container = $(`#container-circle`);
+    let container = $(`#container`);
 
 });
 
