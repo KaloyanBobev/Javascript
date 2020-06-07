@@ -49,6 +49,11 @@ function calculateTriangle(sideA, sideB, sideC, container) {
         let $sideAVal = +sideA.val();
         let $sideBVal = +sideB.val();
         let $sideCVal = +sideC.val();
+        // if ($sideAVal < $sideBVal + $sideCVal &&
+        //     $sideBVal < $sideAVal + $sideCVal &&
+        //     $sideCVal < $sideAVal + $sideBVal) {
+        //     container.text(`The triangle with that sides can not exist!`);
+        // } else 
         if (isNaN(sideA) && isNaN(sideB) && isNaN(sideC)) {
             container.text($sideAVal + $sideBVal + $sideCVal);
         } else {
@@ -63,11 +68,10 @@ function calculateRectangle(sideA, sideB, container) {
     btnRectangle.on("click", function() {
         let $sideAVal = +sideA.val();
         let $sideBVal = +sideB.val();
-        if (isNaN(sideA) && isNaN(sideB)) {
-            container.text(2 * ($sideAVal + $sideBVal));
-        }
         if ($sideAVal === $sideBVal) {
             container.text(`Lendth must be different than width!`);
+        } else if (isNaN(sideA) && isNaN(sideB)) {
+            container.text(2 * ($sideAVal + $sideBVal));
         } else {
             container.text(`Input width and length!`);
         }
