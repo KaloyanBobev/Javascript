@@ -1,19 +1,19 @@
-let nav = new Vue({
-    el: `#nav`,
-    data: {
-        items: [
-            { text: `Perimeter` },
-            { text: `Area` }
-        ],
-        figures: [
-            { text: `Square` },
-            { text: `Rectangle` },
-            { text: `Circle` },
-            { text: `Polygon` },
-            { text: `Parallelogram` },
-        ]
-    },
-});
+// let nav = new Vue({
+//     el: `#nav`,
+//     data: {
+//         items: [
+//             { text: `Perimeter` },
+//             { text: `Area` }
+//         ],
+//         figures: [
+//             { text: `Square` },
+//             { text: `Rectangle` },
+//             { text: `Circle` },
+//             { polygon: `Polygon` },
+//             { text: `Triangle` },
+//         ]
+//     },
+// });
 
 $('#container li').hover(
     function() {
@@ -33,7 +33,7 @@ $(function() {
 
 function calculateWithOneVariable(id, container, formula) {
     id.on("keyup", function() {
-        let $val = id.val();
+        let $val = +id.val();
         if (isNaN($val)) {
             container.text(`That is not a number!`);
         } else {
@@ -54,7 +54,7 @@ function calculateTriangle(sideA, sideB, sideC, container) {
         //     $sideCVal < $sideAVal + $sideBVal) {
         //     container.text(`The triangle with that sides can not exist!`);
         // } else 
-        if (isNaN(sideA) && isNaN(sideB) && isNaN(sideC)) {
+        if (!isNaN($sideAVal) && !isNaN($sideBVal) && !isNaN($sideCVal)) {
             container.text($sideAVal + $sideBVal + $sideCVal);
         } else {
             container.text(`input all three sides!`);
@@ -62,7 +62,7 @@ function calculateTriangle(sideA, sideB, sideC, container) {
     });
 };
 
-btnRectangle = $(`#btn-rectangle`);
+let btnRectangle = $(`#btn-rectangle`);
 
 function calculateRectangle(sideA, sideB, container) {
     btnRectangle.on("click", function() {
@@ -70,10 +70,25 @@ function calculateRectangle(sideA, sideB, container) {
         let $sideBVal = +sideB.val();
         if ($sideAVal === $sideBVal) {
             container.text(`Lendth must be different than width!`);
-        } else if (isNaN(sideA) && isNaN(sideB)) {
+        } else if (!isNaN($sideAVal) && !isNaN($sideBVal)) {
             container.text(2 * ($sideAVal + $sideBVal));
         } else {
             container.text(`Input width and length!`);
+        }
+    });
+};
+let btnPolygon = $(`#btn-polygon`);
+
+function calculatePolygon(sideA, numberSides, container) {
+    btnPolygon.on("click", function() {
+        let $sideAVal = +sideA.val();
+        let $numberSidesVal = +numberSides.val();
+        if ($numberSidesVal <= 2) {
+            container.text(`Can not draw polygon with less than three sides!`);
+        } else if (!isNaN($sideAVal) && !isNaN($numberSidesVal)) {
+            container.text($sideAVal * $numberSidesVal);
+        } else {
+            container.text(`Input numbers and length of side A!`);
         }
     });
 };
@@ -82,13 +97,13 @@ calculateWithOneVariable($(`#tb-input-square`), $(`#container-square`), 4);
 calculateWithOneVariable($(`#tb-input-radius`), $(`#container-circle`), 2 * Math.PI);
 calculateTriangle($(`#tb-input-triangle-a`), $(`#tb-input-triangle-b`), $(`#tb-input-triangle-c`), $(`#container-triangle`));
 calculateRectangle($(`#tb-input-rectangle-a`), $(`#tb-input-rectangle-b`), $(`#container-rectangle`));
-
+calculatePolygon($(`#tb-input-polygon-a`), $(`#tb-input-polygon-numbers`), $(`#container-polygon`));
 let infoSquare = new Vue({
     el: `#infoSquare`,
     data: {
         header: `The Perimeter of Square`,
         information: `A Square is a regular rectangle but have four equal sides A with 90 degrees angles `,
-        formula: `P = 4A`,
+        formula: `P = 4 * A`,
         explanation: `A is the length of one of the sides.`
     }
 });
@@ -98,7 +113,7 @@ let infoCircle = new Vue({
     data: {
         header: `The perimeter of Cirlce`,
         information: `Perimeter is a length around the circle `,
-        formula: `P = 2πR`,
+        formula: `P = 2 *π * R`,
         explanation: `π is constant  equal on 3,1415926535, R is a radius of a circle .`
     }
 });
@@ -118,7 +133,17 @@ let infoRectangle = new Vue({
     data: {
         header: `The Perimeter of Rectangle`,
         information: `Perimeter is the sum of two times length and two times width `,
-        formula: `P =2(A + B) `,
+        formula: `P = 2 * (A + B) `,
         explanation: `A is a length and B is a width.`
+    }
+});
+
+let infoPolygon = new Vue({
+    el: `#infoPolygon`,
+    data: {
+        header: `The Perimeter of regular Polygon`,
+        information: `Perimeter is the sum all equal sides of polygon`,
+        formula: `P = X * A `,
+        explanation: `A is a length of one of the sides and X is number of the sides.`
     }
 });
