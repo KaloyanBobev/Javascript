@@ -23,13 +23,21 @@
                     <li><a href="#">Perimeter</a>
                         <ul>
                             <li>
-                                <a href="#perimeter-square">Square</a></li>
+                                <a href="#perimeter-square">Square</a>
+                            </li>
                             <li>
-                                <a href="#perimeter-circle">Circle</a></li>
+                                <a href="#perimeter-circle">Circle</a>
+                            </li>
                             <li>
-                                <a href="#perimeter-triangle">Triangle</a></li>
+                                <a href="#perimeter-triangle">Triangle</a>
+                            </li>
                             <li>
-                                <a href="#perimeter-rectangle">Rectangle</a></li>
+                                <a href="#perimeter-rectangle">Rectangle</a>
+                            </li>
+                            <li>
+                                <a href="#perimeter-polygon">Polygon</a>
+                            </li>
+
                         </ul>
                     </li>
                     <li><a href="#" class="ui-state-disabled">Area</a>
@@ -152,6 +160,34 @@
                 </div>
             </div>
 
+            <h3 id="perimeter-polygon">Perimeter of Polygon</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Polygon</legend>
+                        <label for="tb-input-polygon-numbers" class="blue-text">Number of poligon sides:</label>
+                        <input type="text" id="tb-input-polygon-numbers" name="tb-input-polygon-numbers" autocomplete="" />
+                        <br>
+                        <label for="tb-input-polygon-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-polygon-a" name="tb-input-polygon-a" autocomplete="" />
+                        <br>
+                        <input type="button" value="Calc" id="btn-polygon">
+                        <div>Polygon circumference
+                            <spam id="container-polygon" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoPolygon">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
         </article>
     </section>
     <script src="./scripts/main.js"></script>
