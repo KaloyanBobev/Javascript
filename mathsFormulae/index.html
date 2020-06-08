@@ -9,6 +9,7 @@
     <script src="./lib/jquery.js"></script>
     <script src="./lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="./lib/vue.js"></script>
+
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
@@ -114,7 +115,7 @@
                         <label for="tb-input-triangle-c" class="blue-text">Side C:</label>
                         <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" autocomplete="" />
                         <br>
-                        <input type="button" value="Calc" id="btn-trianlge">
+                        <input type="button" value="Calculate" id="btn-trianlge" class="ui-button ui-corner-all">
                         <div>Triangle circumference
                             <spam id="container-triangle" class="blue-text"> </spam>
                         </div>
@@ -144,7 +145,7 @@
                         <input type="text" id="tb-input-rectangle-b" name="tb-input-rectangle-b" autocomplete="" />
                         <br>
 
-                        <input type="button" value="Calc" id="btn-rectangle">
+                        <input type="button" value="Calculate" id="btn-rectangle" class="ui-button ui-corner-all">
                         <div>Rectangle circumference
                             <spam id="container-rectangle" class="blue-text"> </spam>
                         </div>
@@ -167,13 +168,13 @@
                 <form>
                     <fieldset>
                         <legend>Polygon</legend>
-                        <label for="tb-input-polygon-numbers" class="blue-text">Number of poligon sides:</label>
+                        <label for="tb-input-polygon-numbers" class="blue-text">Number of polygon sides:</label>
                         <input type="text" id="tb-input-polygon-numbers" name="tb-input-polygon-numbers" autocomplete="" />
                         <br>
                         <label for="tb-input-polygon-a" class="blue-text">Side A:</label>
                         <input type="text" id="tb-input-polygon-a" name="tb-input-polygon-a" autocomplete="" />
                         <br>
-                        <input type="button" value="Calc" id="btn-polygon">
+                        <input type="button" value="Calculate" id="btn-polygon" class="ui-icon-gear ui-button ui-corner-all ">
                         <div>Polygon circumference
                             <spam id="container-polygon" class="blue-text"> </spam>
                         </div>
@@ -193,6 +194,7 @@
         </article>
     </section>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/dataVue.js"></script>
 </body>
 
 </html>
