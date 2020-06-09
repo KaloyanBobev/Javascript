@@ -20,6 +20,9 @@ nav ul {
 nav ul li {
     display: inline-block;
     position: relative;
+    font-size: large;
+    font-variant: small-caps;
+    font-weight: bolder;
 }
 
 nav ul li a {
@@ -84,9 +87,6 @@ input[type=text] {
 
 #accordion>h3 {
     background-color: lightcoral;
-}
-
-fieldset.ui-button {
-    background-color: lemonchiffon;
-    color: lightblue;
+    font-size: large;
+    font-variant: small-caps;
 }
