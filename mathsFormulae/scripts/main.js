@@ -24,6 +24,12 @@ $('#container li').hover(
     }
 );
 
+const VALIDATOR = {
+    validateOneVal: function(val) {
+
+    }
+
+};
 
 $(function() {
     $("#accordion").accordion();
@@ -31,9 +37,13 @@ $(function() {
 
 });
 
+function takeValue(el) {
+    return $value = +el.val();
+}
+
 function calculateWithOneVariable(id, container, formula) {
     id.on("keyup", function() {
-        let $val = +id.val();
+        let $val = takeValue(id);
         if (isNaN($val)) {
             container.text(`That is not a number!`);
         } else {
@@ -46,9 +56,9 @@ let btnTriangle = $(`#btn-trianlge`);
 
 function calculateTriangle(sideA, sideB, sideC, container) {
     btnTriangle.on("click", function() {
-        let $sideAVal = +sideA.val();
-        let $sideBVal = +sideB.val();
-        let $sideCVal = +sideC.val();
+        let $sideAVal = takeValue(sideA);
+        let $sideBVal = takeValue(sideB);
+        let $sideCVal = takeValue(sideC);
         // if ($sideAVal < $sideBVal + $sideCVal &&
         //     $sideBVal < $sideAVal + $sideCVal &&
         //     $sideCVal < $sideAVal + $sideBVal) {
@@ -66,8 +76,8 @@ let btnRectangle = $(`#btn-rectangle`);
 
 function calculateRectangle(sideA, sideB, container) {
     btnRectangle.on("click", function() {
-        let $sideAVal = +sideA.val();
-        let $sideBVal = +sideB.val();
+        let $sideAVal = takeValue(sideA);
+        let $sideBVal = takeValue(sideB);
         if ($sideAVal === $sideBVal) {
             container.text(`Lendth must be different than width!`);
         } else if (!isNaN($sideAVal) && !isNaN($sideBVal)) {
@@ -78,12 +88,14 @@ function calculateRectangle(sideA, sideB, container) {
     });
 };
 
+
+
 let btnPolygon = $(`#btn-polygon`);
 
 function calculatePolygon(sideA, numberSides, container) {
     btnPolygon.on("click", function() {
-        let $sideAVal = +sideA.val();
-        let $numberSidesVal = +numberSides.val();
+        let $sideAVal = takeValue(sideA);
+        let $numberSidesVal = takeValue(numberSides);
         if ($numberSidesVal <= 2) {
             container.text(`Can not draw polygon with less than three sides!`);
         } else if (!isNaN($sideAVal) && !isNaN($numberSidesVal)) {
