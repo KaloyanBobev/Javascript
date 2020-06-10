@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Formulae for perimeter of Circle, Square </title>
+    <meta name="description" content="This is site with inforamtion and formulae for perimeter and area of a circle, square,rectangle,trangle and polygon.">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../lib/vue.js"></script>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../lib/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Perimeter</a>
+                        <ul>
+                            <li>
+                                <a href="perimeter.html#perimeter-square">Square</a>
+                            </li>
+                            <li>
+                                <a href="perimeter.html#perimeter-circle">Circle</a>
+                            </li>
+                            <li>
+                                <a href="perimeter.html#perimeter-triangle">Triangle</a>
+                            </li>
+                            <li>
+                                <a href="perimeter.html#perimeter-rectangle">Rectangle</a>
+                            </li>
+                            <li>
+                                <a href="perimeter.html#perimeter-polygon">Polygon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Area</a>
+                        <ul>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Square</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Circle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Triangle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Rectangle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Polygon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="ui-state-disabled">Volume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <article id="accordion">
+            <h3 id="perimeter-square">Perimeter of Square</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Square</legend>
+                        <label for="tb-input-square" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-square" name="tb-input-square" autocomplete="" />
+                        <div>Square circumference
+                            <spam id="container-square" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoSquare">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+            <h3 id="perimeter-circle" class=" ">Perimeter of Circle</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Circle</legend>
+                        <label for="tb-input-radius" class="blue-text">Radius:</label>
+                        <input type="text" id="tb-input-radius" name="tb-input-radius" autocomplete="" />
+                        <br>
+                        <!-- <label for="tb-input-diameter" class="blue-text">Diameter:</label>
+                        <input type="number" id="tb-input-diameter" name="sade-a" autocomplete="" /> -->
+                        <div>Circle circumference
+                            <spam id="container-circle" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoCircle">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+
+            <h3 id="perimeter-triangle">Perimeter of Triangle</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Triangle</legend>
+                        <label for="tb-input-triangle-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-triangle-a" name="tb-input-triangle-a" autocomplete="" />
+                        <br>
+                        <label for="tb-input-triangle-b" class="blue-text">Side B:</label>
+                        <input type="text" id="tb-input-triangle-b" name="tb-input-triangle-b" autocomplete="" />
+                        <br>
+                        <label for="tb-input-triangle-c" class="blue-text">Side C:</label>
+                        <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" autocomplete="" />
+                        <br>
+                        <input type="button" value="Calculate" id="btn-trianlge" class="ui-button ui-corner-all">
+                        <div>Triangle circumference
+                            <spam id="container-triangle" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoTriangle">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+
+            <h3 id="perimeter-rectangle">Perimeter of Rectangle</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Rectangle</legend>
+                        <label for="tb-input-rectangle-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-rectangle-a" name="tb-input-rectangle-a" autocomplete="" />
+                        <br>
+                        <label for="tb-input-rectangle-b" class="blue-text">Side B:</label>
+                        <input type="text" id="tb-input-rectangle-b" name="tb-input-rectangle-b" autocomplete="" />
+                        <br>
+
+                        <input type="button" value="Calculate" id="btn-rectangle" class="ui-button ui-corner-all">
+                        <div>Rectangle circumference
+                            <spam id="container-rectangle" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoRectangle">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+
+            <h3 id="perimeter-polygon">Perimeter of Polygon</h3>
+            <div>
+                <form>
+                    <fieldset>
+                        <legend>Polygon</legend>
+                        <label for="tb-input-polygon-numbers" class="blue-text">Number of polygon sides:</label>
+                        <input type="text" id="tb-input-polygon-numbers" name="tb-input-polygon-numbers" autocomplete="" />
+                        <br>
+                        <label for="tb-input-polygon-a" class="blue-text">Side A:</label>
+                        <input type="text" id="tb-input-polygon-a" name="tb-input-polygon-a" autocomplete="" />
+                        <br>
+                        <input type="button" value="Calculate" id="btn-polygon" class="ui-icon-gear ui-button ui-corner-all ">
+                        <div>Polygon circumference
+                            <spam id="container-polygon" class="blue-text"> </spam>
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="infoPolygon">
+                    <h2>
+                        {{header}}
+                    </h2>
+                    <div>{{information}}</div>
+                    <div>
+                        <h3 class="blue-text">{{formula}}</h3>
+                    </div>
+                    <div>{{explanation}}</div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/dataVue.js"></script>
+    <script src="../scripts//perimeter.js"></script>
+</body>
+
+</html>
