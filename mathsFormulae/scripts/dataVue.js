@@ -28,7 +28,7 @@ let infoSquare = new Vue({
 let infoCircle = new Vue({
     el: `#infoCircle`,
     data: {
-        header: `The perimeter of Cirlce`,
+        header: `The perimeter of Circle`,
         information: `Perimeter is a length around the circle. `,
         formula: `P = 2 *π * R`,
         explanation: `π is constant  equal on 3,1415926535, R is a radius of a circle .`
