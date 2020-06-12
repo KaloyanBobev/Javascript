@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
+
+
+</head>
+
+<body ng-app="mathsFormulaeApp">
+
+    <header>
+        <nav>
+            <div id="container-nav">
+                <ul>
+                    <li><a href="#/!">Home</a></li>
+                    <li><a href="#!perimeter">Perimeter</a>
+                        <ul>
+                            <li>
+                                <a href="#!perimeter#perimeter-square">Square</a>
+                            </li>
+                            <li>
+                                <a href="#!perimeter#perimeter-circle">Circle</a>
+                            </li>
+                            <li>
+                                <a href="#!perimeter#perimeter-triangle">Triangle</a>
+                            </li>
+                            <li>
+                                <a href="#!perimeter#perimeter-rectangle">Rectangle</a>
+                            </li>
+                            <li>
+                                <a href="#!perimeter#perimeter-polygon">Polygon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Area</a>
+                        <ul>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Square</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Circle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Triangle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Rectangle</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-state-disabled">Polygon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="ui-state-disabled">Volume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div ng-view></div>
+
+    <footer>
+        <div>This is footer</div>
+    </footer>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../data/data.js"></script>
+</body>
+
+</html>
