@@ -1,0 +1,112 @@
+<script src="../scripts/main.js"></script>
+<script src="../lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
+<section>
+    <article id="accordion">
+        <h3 id="perimeter-square">Perimeter of Square</h3>
+        <div>
+            <form ng-controller="formulaeInfo">
+                <fieldset ng-init="side=0">
+                    <canvas id="canvas-square">Your browser does not support the HTML5 canvas tag.</canvas>
+                    <div> {{infos[0].information}}</div>
+                    <div class="blue-text">{{infos[0].formula}}</div>
+                    <div>{{infos[0].explanation}}</div>
+                    <legend>Square</legend>
+                    <label for="tb-input-square" class="blue-text">Side A:</label>
+                    <input type="text" id="tb-input-square" name="tb-input-square" ng-model="side" />
+                    <div>Square circumference
+                        <spam class="blue-text">{{side*4}} </spam>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        </div>
+        <h3 id="perimeter-circle">Perimeter of Circle</h3>
+        <div>
+            <form ng-controller="formulaeInfo">
+                <fieldset ng-init="radius=0">
+                    <canvas id="canvas-circle">Your browser does not support the HTML5 canvas tag.</canvas>
+                    <div> {{infos[1].information}}</div>
+                    <div class="blue-text">{{infos[1].formula}}</div>
+                    <div>{{infos[1].explanation}}</div>
+                    <legend>Circle</legend>
+                    <label for="tb-input-radius" class="blue-text">Radius:</label>
+                    <input type="text" id="tb-input-radius" name="tb-input-radius" ng-model="radius" />
+                    <br>
+                    <!-- <label for="tb-input-diameter" class="blue-text">Diameter:</label>
+                    <input type="text" id="tb-input-diameter" name="sade-a" ngmodel="diameter" /> -->
+                    <div>Circle circumference
+                        <spam id="container-circle" class="blue-text">{{radius*3.1415926535*2}} </spam>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <h3 id="perimeter-triangle">Perimeter of Triangle</h3>
+        <div>
+            <form ng-controller="formulaeInfo">
+                <fieldset ng-init="sideA=0,sideB=0,sideC=0">
+                    <legend>Triangle</legend>
+                    <canvas id="canvas-triangle"></canvas>
+                    <div> {{infos[2].information}}</div>
+                    <div class="blue-text">{{infos[2].formula}}</div>
+                    <div>{{infos[2].explanation}}</div>
+                    <label for="tb-input-triangle-a" class="blue-text">Side A:</label>
+                    <input type="text" id="tb-input-triangle-a" name="tb-input-triangle-a" ng-model="sideA" />
+                    <br>
+                    <label for="tb-input-triangle-b" class="blue-text">Side B:</label>
+                    <input type="text" id="tb-input-triangle-b" name="tb-input-triangle-b" ng-model="sideB" />
+                    <br>
+                    <label for="tb-input-triangle-c" class="blue-text">Side C:</label>
+                    <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" ng-model="sideC" />
+                    <br>
+                    <div>Triangle circumference
+                        <spam id="container-triangle" class="blue-text">{{sideA*1+sideB*1+sideC*1}} </spam>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <h3 id="perimeter-rectangle">Perimeter of Rectangle</h3>
+        <div>
+            <form ng-controller="formulaeInfo">
+                <fieldset ng-init="sideE=0,sideF=0">
+                    <canvas id="canvas-rectangle"></canvas>
+                    <div> {{infos[3].information}}</div>
+                    <div class="blue-text">{{infos[3].formula}}</div>
+                    <div>{{infos[3].explanation}}</div>
+                    <legend>Rectangle</legend>
+                    <label for="tb-input-rectangle-a" class="blue-text">Side A:</label>
+                    <input type="text" id="tb-input-rectangle-a" name="tb-input-rectangle-a" ng-model="sideE" />
+                    <br>
+                    <label for="tb-input-rectangle-b" class="blue-text">Side B:</label>
+                    <input type="text" id="tb-input-rectangle-b" name="tb-input-rectangle-b" ng-model="sideF" />
+                    <br>
+                    <div>Rectangle circumference
+                        <spam id="container-rectangle" class="blue-text">{{sideE*2+sideF*2}} </spam>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <h3 id="perimeter-polygon">Perimeter of Polygon</h3>
+        <div>
+            <form ng-controller="formulaeInfo">
+                <fieldset ng-init="numbers=0,sideS-=0">
+                    <canvas id="canvas-polygon"></canvas>
+                    <div> {{infos[4].information}}</div>
+                    <div class="blue-text">{{infos[4].formula}}</div>
+                    <div>{{infos[4].explanation}}</div>
+                    <legend>Polygon</legend>
+                    <label for="tb-input-polygon-numbers" class="blue-text">Number of polygon sides:</label>
+                    <input type="text" id="tb-input-polygon-numbers" name="tb-input-polygon-numbers" ng-model="numbers" />
+                    <br>
+                    <label for="tb-input-polygon-a" class="blue-text">Side A:</label>
+                    <input type="text" id="tb-input-polygon-a" name="tb-input-polygon-a" ng-model="sideS" />
+                    <br>
+                    <div>Polygon circumference
+                        <spam id="container-polygon" class="blue-text"> {{numbers*sideS}}</spam>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </article>
+</section>
