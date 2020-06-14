@@ -1,8 +1,9 @@
 <div>
-    <h2> Information for perimeters for Square and etc. </h2>
+    <h1> Information for perimeter and area for Square, Circle, Triangle, Rectangle and Polygon </h1>
     <div ng-controller="formulaeInfo">
         <div ng-repeat="i in infos">
             <h2>{{i.header}}</h2>
+            <img ng-src="{{i.src}}" alt="perimeter">
             <div> {{i.information}}</div>
             <div class="blue-text">{{i.formula}}</div>
             <div>{{i.explanation}}</div>
