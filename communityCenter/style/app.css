@@ -68,6 +68,8 @@ iframe {
     zoom: 1;
 }
 
-.sticky {
+.sticky-nav {
     position: sticky;
+    top: 0px;
+    z-index: 1;
 }
