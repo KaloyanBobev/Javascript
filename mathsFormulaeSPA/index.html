@@ -17,7 +17,7 @@
 
 </head>
 
-<body ng-app="mathsFormulaeApp">
+<body ng-app="mathsFormulaeApp" ng-cloak>
 
     <header>
         <nav>
@@ -43,7 +43,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">Area</a>
+                    <li><a href="#!area">Area</a>
                         <ul>
                             <li>
                                 <a href="#" class="ui-state-disabled">Square</a>
@@ -62,7 +62,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#" class="ui-state-disabled">Volume</a>
+                    <li><a href="#!tests">Tests</a>
+                    </li>
+                    <li><a href="#!volume" class="ui-state-disabled">Volume</a>
                     </li>
                 </ul>
             </div>
@@ -71,12 +73,14 @@
 
     <div ng-view></div>
 
-    <footer>
-        <div>This is footer</div>
+    <footer ng-controller="PageController">
+        <div class=""> Copyright &#169; Author {{author}} , Year: {{year}}</div>
     </footer>
     <script src="../scripts/app.js"></script>
     <script src="../scripts/main.js"></script>
     <script src="../data/data.js"></script>
+    <script src="./scripts/contollers/pagecontroller.js"></script>
+
 </body>
 
 </html>
