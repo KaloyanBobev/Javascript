@@ -6,6 +6,7 @@
 
 body {
     background-color: azure;
+    font-size: 1.5em;
 }
 
 
@@ -99,4 +100,15 @@ input[type=text] {
     background-color: var(--head-bg-color);
     font-size: large;
     font-variant: small-caps;
+}
+
+
+/* footer */
+
+footer div {
+    padding: 3em 0 1em 0;
+    font-size: 1em;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
 }
