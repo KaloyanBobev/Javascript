@@ -51,37 +51,39 @@
                     <li><a href="#!area">Area</a>
                         <ul>
                             <li>
-                                <a href="#!area#perimeter-square-area">Square</a>
+                                <a href="#!area#area-square">Square</a>
                             </li>
                             <li>
-                                <a href="#!area#perimeter-circle-area">Circle</a>
+                                <a href="#!area#area-circle">Circle</a>
                             </li>
                             <li>
-                                <a href="#!area#perimeter-triangle-area">Triangle</a>
+                                <a href="#!area#area-triangle">Triangle</a>
                             </li>
                             <li>
-                                <a href="#!area#perimeter-rectangle-area">Rectangle</a>
+                                <a href="#!area#area-rectangle">Rectangle</a>
                             </li>
                             <li>
-                                <a href="#!area#perimeter-polygon-area">Polygon</a>
+                                <a href="#!area#area-polygon">Polygon</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#!tests ">Tests</a>
+                    <li><a href="#!tests">Tests</a>
                     </li>
                     <li><a href="#!volume " class="ui-state-disabled ">Volume</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="row">
+            <img src="./img/maths.jpg" class="mx-auto" alt="maths formulae">
+        </div>
     </header>
-    <!-- <div class="row "> -->
-    <div ng-view class="mx-auto col-md-10 "></div>
-    <!-- <nav class="col-md-1 ">
+    <div class="row ">
+        <div ng-view class="mx-auto col-md-10 "></div>
+        <nav class="col-md-1">
             <ul>
                 <li><a href="#/! ">Home</a></li>
-                <li>Perimeter
-
+                <li><span>Perimeter</span>
                     <li>
                         <a href="#!perimeter#perimeter-square ">Square</a>
                     </li>
@@ -99,42 +101,40 @@
                     </li>
 
                 </li>
-                <li><a href="#!area ">Area</a>
-                    <ul>
-                        <li>
-                            <a href="# " class="ui-state-disabled ">Square</a>
-                        </li>
-                        <li>
-                            <a href="# " class="ui-state-disabled ">Circle</a>
-                        </li>
-                        <li>
-                            <a href="# " class="ui-state-disabled ">Triangle</a>
-                        </li>
-                        <li>
-                            <a href="# " class="ui-state-disabled ">Rectangle</a>
-                        </li>
-                        <li>
-                            <a href="# " class="ui-state-disabled ">Polygon</a>
-                        </li>
-                    </ul>
+                <li><span>Area</span>
+                    <li>
+                        <a href="#!area#area-square">Square</a>
+                    </li>
+                    <li>
+                        <a href="#!area#area-circle">Circle</a>
+                    </li>
+                    <li>
+                        <a href="#!area#area-triangle">Triangle</a>
+                    </li>
+                    <li>
+                        <a href="#!area#area-rectangle">Rectangle</a>
+                    </li>
+                    <li>
+                        <a href="#!area#area-polygon">Polygon</a>
+                    </li>
                 </li>
                 <li><a href="#!tests ">Tests</a>
                 </li>
-                <li><a href="#!volume " class="ui-state-disabled ">Volume</a>
-                </li>
+
             </ul>
         </nav>
-    </div> -->
+    </div>
 
 
 
 
-    <footer ng-controller="PageController ">
+    <footer ng-controller="PageController">
         <div class=" "> Copyright &#169; Author {{author}} , Year: {{year}}</div>
     </footer>
     <script src="../scripts/app.js "></script>
     <script src="../scripts/main.js "></script>
     <script src="../data/data.js "></script>
+    <script src="./scripts/canvas.js"></script>
     <script src="./scripts/contollers/pagecontroller.js "></script>
 
 </body>
