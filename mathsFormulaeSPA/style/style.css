@@ -96,10 +96,16 @@ input[type=text] {
     background-color: azure;
 }
 
-#accordion>h3 {
+#accordion>h3,
+#accordion-area>h3 {
     background-color: var(--head-bg-color);
     font-size: large;
     font-variant: small-caps;
+}
+
+canvas {
+    width: auto;
+    height: auto;
 }
 
 
