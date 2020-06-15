@@ -12,3 +12,9 @@ $(function() {
     let container = $(`#container`);
 
 });
+
+$(function() {
+    $("#accordion-area").accordion();
+    let container = $(`#container`);
+
+});
