@@ -1,6 +1,6 @@
-(function drawSquare() {
-    $(`#tb-input-square`).on(`keyup`, () => {
-        let ctx = $(`#canvas-square`).get(0)
+function drawSquare(id, el) {
+    $(id).on(`keyup`, () => {
+        let ctx = $(el).get(0)
             .getContext("2d");
         ctx.beginPath();
         ctx.lineWidth = 5;
@@ -9,11 +9,14 @@
         ctx.font = "1.5em Arial";
         ctx.fillText("A", 160, 80);
     })
-})();
+};
 
-(function drawCircle() {
-    $(`#tb-input-radius`).on(`keyup`, () => {
-        let ctx = $(`#canvas-circle`).get(0)
+drawSquare(`#tb-input-square`, `#canvas-square`);
+drawSquare(`#tb-input-square-area`, `#canvas-square-area`);
+
+function drawCircle(id, el) {
+    $(id).on(`keyup`, () => {
+        let ctx = $(el).get(0)
             .getContext("2d");
         ctx.beginPath();
         ctx.lineWidth = 5;
@@ -27,7 +30,10 @@
         ctx.font = "1.5em Arial";
         ctx.fillText("R", 115, 65);
     })
-})();
+};
+
+drawCircle(`#tb-input-radius`, `#canvas-circle`);
+drawCircle(`#tb-input-radius-area`, `#canvas-circle-area`);
 
 (function drawTriangle() {
     $(`#tb-input-triangle-c`).on(`keyup`, () => {
