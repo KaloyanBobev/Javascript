@@ -55,34 +55,37 @@ drawCircle(`#tb-input-radius-area`, `#canvas-circle-area`);
     })
 })();
 
-(function drawRectangle() {
-    $(`#tb-input-rectangle-b`).on(`keyup`, () => {
-        let ctx = $(`#canvas-rectangle`).get(0)
+
+function drawRectangle(id, el, width, height) {
+    $(id).on(`keyup`, () => {
+        let ctx = $(el).get(0)
             .getContext("2d");
         ctx.beginPath();
         ctx.lineWidth = 5;
         ctx.rect(50, 20, 100, 60);
         ctx.stroke();
         ctx.font = "1.5em Arial";
-        ctx.fillText("A", 160, 60);
+        ctx.fillText(width, 160, 60);
         ctx.font = "1.5em Arial";
-        ctx.fillText("B", 90, 110);
+        ctx.fillText(height, 90, 110);
     })
-})();
+};
 
-(function drawRectangle() {
-    $(`#tb-input-polygon-a`).on(`keyup`, () => {
-        let ctx = $(`#canvas-polygon`).get(0)
+drawRectangle(`#tb-input-rectangle-b`, `#canvas-rectangle`, `A`, `B`);
+drawRectangle(`#tb-input-rectangle-heigthRect`, `#canvas-rectangle-area`, `H`, `W`);
+
+function drawRectangle(id, el, numbers) {
+    $(id).on(`keyup`, () => {
+        let ctx = $(el).get(0)
             .getContext("2d");
-
-        let numberOfSides = $(`#tb-input-polygon-numbers`).val();
-        let radius = $(`#tb-input-polygon-a`).val() * 5;
+        let numberOfSides = $(numbers).val();
+        let radius = $(id).val() * 5;
         let x = 50;
         let y = 50;
         let angle = 2 * Math.PI / numberOfSides;
-
+        ctx.save();
         ctx.beginPath();
-        ctx.clearRect(-50, -50, 300, 300);
+        ctx.clearRect(-x, -y, 300, 300);
         ctx.lineWidth = 5;
         ctx.translate(x, y);
         ctx.moveTo(radius, 0);
@@ -90,8 +93,11 @@ drawCircle(`#tb-input-radius-area`, `#canvas-circle-area`);
             ctx.lineTo(radius * Math.cos(i * angle), radius * Math.sin(i * angle));
         }
         ctx.stroke();
-        ctx.font = "1.5em Arial";
-        ctx.fillText("R", x - 50, y - 50);
-
+        // ctx.font = "1.5em Arial";
+        // ctx.fillText("R", x - 50, y - 50);
+        ctx.restore();
     })
-})();
+};
+
+drawRectangle(`#tb-input-polygon-a`, `#canvas-polygon`, `#tb-input-polygon-numbers`);
+drawRectangle(`#tb-input-polygon-aphotem`, `#canvas-polygon-area`, `#tb-input-polygon-perimeterPolygon`);
