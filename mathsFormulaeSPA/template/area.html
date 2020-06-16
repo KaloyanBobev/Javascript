@@ -86,7 +86,8 @@
         <div>
             <form ng-controller="formulaeInfo">
                 <fieldset ng-init="perimeterPolygon=0,aphotem=0">
-                    <canvas id="canvas-polygon-area"></canvas>
+                    <!-- <canvas id="canvas-polygon-area"></canvas> -->
+                    <img src="{{infos[9].src}}" alt="area of polygon with perimeter and aphotem">
                     <div> {{infos[9].information}}</div>
                     <div class="blue-text">{{infos[9].formula}}</div>
                     <div>{{infos[9].explanation}}</div>
