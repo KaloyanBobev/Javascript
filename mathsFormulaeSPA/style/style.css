@@ -5,7 +5,6 @@
 }
 
 body {
-    background-color: lightslategray;
     font-size: 1.5em;
 }
 
@@ -32,7 +31,8 @@ nav ul li {
     font-weight: bolder;
 }
 
-nav ul li a {
+nav ul li a,
+#side-nav ul li a {
     color: #fff;
     display: block;
     font-size: 20px;
@@ -68,6 +68,22 @@ nav ul li ul li a {
 
 nav ul li ul li a:hover {
     background: #126d9b;
+}
+
+
+/* main picture */
+
+#main-pic {
+    width: 50%;
+    opacity: 0.4;
+}
+
+
+/* side nav */
+
+#side-nav {
+    display: flex;
+    flex-direction: column;
 }
 
 
