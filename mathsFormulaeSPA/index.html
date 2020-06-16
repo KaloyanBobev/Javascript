@@ -23,7 +23,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body ng-app="mathsFormulaeApp" ng-cloak>
+<body ng-app="mathsFormulaeApp" ng-cloak class="bg-secondary">
     <header>
         <nav>
             <div id="container-nav">
@@ -75,49 +75,49 @@
             </div>
         </nav>
         <div class="row">
-            <img src="./img/maths.jpg" class="mx-auto" alt="maths formulae">
+            <img src="./img/maths.jpg" id="main-pic" class="mx-auto d-sm-none d-md-block" alt="maths formulae">
         </div>
     </header>
     <div class="row ">
-        <div ng-view class="mx-auto col-md-10 "></div>
-        <nav class="col-md-1">
-            <ul>
+        <div ng-view class="mx-auto col-md-8 "></div>
+        <nav class="col-md-2">
+            <ul id="side-nav">
                 <li><a href="#/! ">Home</a></li>
-                <li><span>Perimeter</span>
-                    <li>
-                        <a href="#!perimeter#perimeter-square ">Square</a>
-                    </li>
-                    <li>
-                        <a href="#!perimeter#perimeter-circle ">Circle</a>
-                    </li>
-                    <li>
-                        <a href="#!perimeter#perimeter-triangle ">Triangle</a>
-                    </li>
-                    <li>
-                        <a href="#!perimeter#perimeter-rectangle ">Rectangle</a>
-                    </li>
-                    <li>
-                        <a href="#!perimeter#perimeter-polygon ">Polygon</a>
-                    </li>
+                <li><span>Perimeter</span></li>
+                <li>
+                    <a href="#!perimeter#perimeter-square ">Square</a>
+                </li>
+                <li>
+                    <a href="#!perimeter#perimeter-circle ">Circle</a>
+                </li>
+                <li>
+                    <a href="#!perimeter#perimeter-triangle ">Triangle</a>
+                </li>
+                <li>
+                    <a href="#!perimeter#perimeter-rectangle ">Rectangle</a>
+                </li>
+                <li>
+                    <a href="#!perimeter#perimeter-polygon ">Polygon</a>
+                </li>
 
+
+                <li><span>Area</span></li>
+                <li>
+                    <a href="#!area#area-square">Square</a>
                 </li>
-                <li><span>Area</span>
-                    <li>
-                        <a href="#!area#area-square">Square</a>
-                    </li>
-                    <li>
-                        <a href="#!area#area-circle">Circle</a>
-                    </li>
-                    <li>
-                        <a href="#!area#area-triangle">Triangle</a>
-                    </li>
-                    <li>
-                        <a href="#!area#area-rectangle">Rectangle</a>
-                    </li>
-                    <li>
-                        <a href="#!area#area-polygon">Polygon</a>
-                    </li>
+                <li>
+                    <a href="#!area#area-circle">Circle</a>
                 </li>
+                <li>
+                    <a href="#!area#area-triangle">Triangle</a>
+                </li>
+                <li>
+                    <a href="#!area#area-rectangle">Rectangle</a>
+                </li>
+                <li>
+                    <a href="#!area#area-polygon">Polygon</a>
+                </li>
+
                 <li><a href="#!tests ">Tests</a>
                 </li>
 
