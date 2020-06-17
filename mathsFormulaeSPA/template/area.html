@@ -3,8 +3,8 @@
 <section>
     <article id="accordion-area">
         <h3 id="square-area">Area of Square</h3>
-        <div>
-            <form ng-controller="formulaeInfo">
+        <div ng-controller="formulaeInfo">
+            <form>
                 <fieldset ng-init="sideZ=0">
                     <canvas id="canvas-square-area">Your browser does not support the HTML5 canvas tag.</canvas>
                     <div> {{infos[5].information}}</div>
@@ -13,7 +13,7 @@
                     <legend>Square</legend>
                     <label for="tb-input-square-area" class="blue-text">Side A:</label>
                     <input type="text" id="tb-input-square-area" name="tb-input-square" ng-model="sideZ" />
-                    <div>Square circumference
+                    <div>Square area
                         <spam class="blue-text">{{sideZ*sideZ}} </spam>
                     </div>
                 </fieldset>
@@ -32,7 +32,7 @@
                     <label for="tb-input-radius-area" class="blue-text">Radius:</label>
                     <input type="text" id="tb-input-radius-area" name="tb-input-radius-area" ng-model="radiusA" />
                     <br>
-                    <div>Circle circumference
+                    <div>Circle area
                         <spam id="container-circle" class="blue-text">{{radiusA*radiusA*3.1415926535*2}} </spam>
                     </div>
                 </fieldset>
@@ -55,7 +55,7 @@
                     <input type="text" id="tb-input-triangle-heightTriangle" name="tb-input-triangle-heightTriangle" ng-model="heightTriangle" />
                     <br>
 
-                    <div>Triangle circumference
+                    <div>Triangle area
                         <spam id="container-triangle-area" class="blue-text">{{0.5*base*heightTriangle}} </spam>
                     </div>
                 </fieldset>
@@ -76,7 +76,7 @@
                     <label for="tb-input-rectangle-heigthRect" class="blue-text">Height:</label>
                     <input type="text" id="tb-input-rectangle-heigthRect" name="tb-input-rectangle-heigthRect" ng-model="heigthRect" />
                     <br>
-                    <div>Rectangle circumference
+                    <div>Rectangle area
                         <spam id="container-rectangle" class="blue-text">{{heigthRect*widthRect}} </spam>
                     </div>
                 </fieldset>
@@ -87,7 +87,7 @@
             <form ng-controller="formulaeInfo">
                 <fieldset ng-init="perimeterPolygon=0,aphotem=0">
                     <!-- <canvas id="canvas-polygon-area"></canvas> -->
-                    <img src="{{infos[9].src}}" alt="area of polygon with perimeter and aphotem">
+                    <img src="{{infos[9].src}}" alt="polygon">
                     <div> {{infos[9].information}}</div>
                     <div class="blue-text">{{infos[9].formula}}</div>
                     <div>{{infos[9].explanation}}</div>
@@ -98,7 +98,7 @@
                     <label for="tb-input-polygon-aphotem" class="blue-text">Aphotem:</label>
                     <input type="text" id="tb-input-polygon-aphotem" name="tb-input-polygon-aphotem" ng-model="aphotem" />
                     <br>
-                    <div>Polygon circumference
+                    <div>Polygon area
                         <spam id="container-polygon" class="blue-text"> {{0.5*aphotem*perimeterPolygon}}</spam>
                     </div>
                 </fieldset>
