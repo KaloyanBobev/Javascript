@@ -72,12 +72,24 @@ mathsApp.controller("formulaeInfo", function($scope) {
     }];
 
     $scope.questions = [{
-        id: 1,
+        id: 0,
         task: `The circle has a radius = 5.5 cm, find the circle circumference if the π = 3.14`,
         src: `../img/perimeter-circle.png`,
-        answerA: `34.54 cm`,
-        answerB: `345.4 cm`,
-        answerC: `17.27 cm`,
-        answerD: `11 cm`
+    }, {
+        id: 1,
+        task: `The rectangle have side A = 5 and side B = 8, find the rectange circumference`,
+        src: `../img/perimeter-rectangle.png`,
+    }, {
+        id: 2,
+        task: `The triangle have base B = 7 and height H = 9, find the triangle area`,
+        src: `../img/area-triangle.png`,
+    }, {
+        id: 3,
+        task: `The rectangle have width W = 5.6 and height = 4.5, find a rectange area`,
+        src: `../img/area-rectangle.png`,
+    }, {
+        id: 4,
+        task: `The polygon have number of sides X = 6 and side A = 7.8, find the polygon perimeter`,
+        src: `../img/perimeter-polygon.png`,
     }];
 });
