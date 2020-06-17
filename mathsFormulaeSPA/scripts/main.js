@@ -16,5 +16,9 @@ $(function() {
 $(function() {
     $("#accordion-area").accordion();
     let container = $(`#container`);
+});
 
+$(function() {
+    $("input[radio]").checkboxradio();
+    $("#radio-group fieldset").controlgroup();
 });
