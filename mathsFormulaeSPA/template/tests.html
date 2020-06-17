@@ -1,8 +1,8 @@
 <section class=" row bg-light">
-    <article class="mx-auto col-md-10">
+    <article class="mx-auto col-md-8">
         <h1 class="mx-auto"> Maths test</h1>
         <div ng-controller="formulaeInfo" class="row">
-            <div ng-repeat="q in questions">
+            <div ng-repeat="q in questions" class="col-md-10">
                 <h2>Question {{q.id+1}}</h2>
                 <h3>{{q.task}}</h3>
                 <img ng-src="{{q.src}}" alt="">
