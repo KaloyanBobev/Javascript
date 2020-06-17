@@ -70,4 +70,14 @@ mathsApp.controller("formulaeInfo", function($scope) {
         explanation: `P is a perimeter and A is for apothem.`,
         src: `../img/area-polygon.png`
     }];
+
+    $scope.questions = [{
+        id: 1,
+        task: `The circle has a radius = 5.5 cm, find the circle circumference if the π = 3.14`,
+        src: `../img/perimeter-circle.png`,
+        answerA: `34.54 cm`,
+        answerB: `345.4 cm`,
+        answerC: `17.27 cm`,
+        answerD: `11 cm`
+    }];
 });
