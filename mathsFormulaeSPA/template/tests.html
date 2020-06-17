@@ -1,1 +1,31 @@
-<h1>Maths test</h1>
+<script src="../scripts/main.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<section class=" row bg-light">
+    <article class="mx-auto col-md-10">
+        <h1 class="mx-auto"> Maths test</h1>
+        <div ng-controller="formulaeInfo" class="row">
+            <div ng-repeat="q in questions">
+                <h2>Question {{q.id}}</h2>
+                <h3>{{q.task}}</h3>
+                <img ng-src="{{q.src}}" alt="">
+            </div>
+            <div class="widget" id="radio-group">
+                <h2>Radio Group</h2>
+                <fieldset>
+                    <legend>Select a Location: </legend>
+                    <label for="radio-1">A</label>
+                    <input type="radio" name="radio-1" id="radio-1">
+                    <label for="radio-2">B</label>
+                    <input type="radio" name="radio-1" id="radio-2">
+                    <label for="radio-3">C</label>
+                    <input type="radio" name="radio-1" id="radio-3">
+                    <label for="radio-3">D</label>
+                    <input type="radio" name="radio-1" id="radio-3">
+                </fieldset>
+            </div>
+        </div>
+    </article>
+</section>
