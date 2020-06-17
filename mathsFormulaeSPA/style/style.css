@@ -5,6 +5,8 @@
 }
 
 body {
+    background-image: url("../img/maths.jpg");
+    background-position: center;
     font-size: 1.5em;
 }
 
@@ -71,14 +73,6 @@ nav ul li ul li a:hover {
 }
 
 
-/* main picture */
-
-#main-pic {
-    width: 50%;
-    opacity: 0.4;
-}
-
-
 /* side nav */
 
 #side-nav {
@@ -91,6 +85,7 @@ nav ul li ul li a:hover {
 
 section {
     margin-top: 5%;
+    background-color: whitesmoke;
 }
 
 .blue-text {
