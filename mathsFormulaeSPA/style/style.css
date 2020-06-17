@@ -94,10 +94,10 @@ section {
     font-weight: bolder;
 }
 
-fieldset {
+#accordion-area fieldset,
+#accordion fieldset {
     width: 35%;
     display: flex;
-    border-radius: var(--border-radius);
 }
 
 input[type=text] {
@@ -117,6 +117,18 @@ input[type=text] {
 canvas {
     width: auto;
     height: auto;
+}
+
+.answer-container {
+    padding-top: 5%;
+}
+
+.answer-container input {
+    width: 3em;
+}
+
+#check-btn {
+    margin: 5%;
 }
 
 
