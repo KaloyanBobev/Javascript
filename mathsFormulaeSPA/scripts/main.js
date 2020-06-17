@@ -18,7 +18,20 @@ $(function() {
     let container = $(`#container`);
 });
 
-$(function() {
-    $("input[radio]").checkboxradio();
-    $("#radio-group fieldset").controlgroup();
-});
+function checkResult() {
+    let ckeckBtn = $(`#check-btn`);
+    let array = [34.54, 26, 31.5, 25.2, 46.8];
+    ckeckBtn.on(`click`, function() {
+        for (let i = 0; i < 5; i += 1) {
+            let element = $(`#answer-${i}`);
+            if (element.val() * 1 === array[i]) {
+                element.css("border", "2px solid lightgreen");
+                element.next().text(`Correct`).css("color", "lightgreen").addClass("glyphicon glyphicon-ok");
+            } else {
+                element.css("border", "2px solid red");
+                element.next().text(`incorrect - a correct answer is ${array[i]}`).css("color", "red");;
+            }
+        }
+    })
+};
+checkResult();
