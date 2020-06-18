@@ -1,14 +1,14 @@
-<section class=" row bg-light">
+<section class="row bg-light">
     <article class="mx-auto col-md-10">
         <div class="row">
-            <h1 class="mx-auto"> Information for perimeter and area for square, circle, triangle, rectangle and polygon </h1>
+            <h1 class="mx-auto text-success text-center"> Information for perimeter and area for square, circle, triangle, rectangle and polygon </h1>
             <div ng-controller="formulaeInfo">
                 <div ng-repeat="i in infos">
-                    <h2>{{i.header}}</h2>
+                    <h2 class="text-primary text-center">{{i.header}}</h2>
                     <img ng-src="{{i.src}}" alt="perimeter">
-                    <div> {{i.information}}</div>
+                    <div class="text-info"> {{i.information}}</div>
                     <div class="blue-text">{{i.formula}}</div>
-                    <div>{{i.explanation}}</div>
+                    <div class="bottom">{{i.explanation}}</div>
                 </div>
             </div>
         </div>
