@@ -1,19 +1,19 @@
 <section class=" row bg-light">
     <article class="mx-auto col-md-8">
-        <h1 class="mx-auto"> Maths test</h1>
+        <h1 class="mx-auto text-success"> Maths test</h1>
         <div ng-controller="formulaeInfo" class="row">
             <div ng-repeat="q in questions" class="col-md-10">
-                <h2>Question {{q.id+1}}</h2>
-                <h3>{{q.task}}</h3>
+                <h2 class="text-primary">Question {{q.id+1}}</h2>
+                <h3 class="text-info">{{q.task}}</h3>
                 <img ng-src="{{q.src}}" alt="">
                 <div class="answer-container">
                     <label for="answer">Write you answer here:</label>
                     <input type="text" id="answer-{{q.id}}"> <span></span>
                 </div>
-                <hr>
+                <hr class="bottom">
             </div>
         </div>
-        <button id="check-btn" class="btn  btn-info">Check Answers</button>
+        <button id="check-btn" class="btn  btn-info ">Check Answers</button>
 
     </article>
 </section>
