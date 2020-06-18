@@ -84,7 +84,8 @@ nav ul li ul li a:hover {
 /* section */
 
 section {
-    margin-top: 5%;
+    padding: 5%;
+    margin-top: 15%;
     background-color: whitesmoke;
 }
 
