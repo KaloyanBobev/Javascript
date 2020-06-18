@@ -58,6 +58,7 @@ drawCircle(`#tb-input-radius-area`, `#canvas-circle-area`);
 
 function drawRectangle(id, el, width, height) {
     $(id).on(`keyup`, () => {
+        debugger;
         let ctx = $(el).get(0)
             .getContext("2d");
         ctx.beginPath();
@@ -74,7 +75,7 @@ function drawRectangle(id, el, width, height) {
 drawRectangle(`#tb-input-rectangle-b`, `#canvas-rectangle`, `A`, `B`);
 drawRectangle(`#tb-input-rectangle-heigthRect`, `#canvas-rectangle-area`, `H`, `W`);
 
-function drawRectangle(id, el, numbers) {
+function drawPolygon(id, el, numbers) {
     $(id).on(`keyup`, () => {
         let ctx = $(el).get(0)
             .getContext("2d");
@@ -99,5 +100,5 @@ function drawRectangle(id, el, numbers) {
     })
 };
 
-drawRectangle(`#tb-input-polygon-a`, `#canvas-polygon`, `#tb-input-polygon-numbers`);
-drawRectangle(`#tb-input-polygon-aphotem`, `#canvas-polygon-area`, `#tb-input-polygon-perimeterPolygon`);
+drawPolygon(`#tb-input-polygon-a`, `#canvas-polygon`, `#tb-input-polygon-numbers`);
+drawPolygon(`#tb-input-polygon-aphotem`, `#canvas-polygon-area`, `#tb-input-polygon-perimeterPolygon`);
