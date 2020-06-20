@@ -27,8 +27,8 @@
 
 <body ng-app="mathsFormulaeApp" ng-cloak>
     <header>
-        <nav>
-            <div id="container-nav">
+        <nav class="navbar navbar-expand-lg hidden-xs">
+            <div id="container-nav" class="navbar-collapse">
                 <ul>
                     <li><a href="#/!">Home</a></li>
                     <li><a href="#!perimeter">Perimeter</a>
@@ -71,8 +71,8 @@
                     </li>
                     <li><a href="#!tests">Tests</a>
                     </li>
-                    <li><a href="#!volume " class="ui-state-disabled ">Volume</a>
-                    </li>
+                    <!-- <li><a href="#!volume " class="ui-state-disabled ">Volume</a>
+                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -80,7 +80,7 @@
     </header>
     <div class="row ">
         <div ng-view class="mx-auto col-md-8 "></div>
-        <nav class="col-md-2">
+        <nav class="col-md-2  hidden-xs">
             <ul id="side-nav">
                 <li><a href="#/! ">Home</a></li>
                 <li><span>Perimeter</span></li>
@@ -120,7 +120,6 @@
 
                 <li><a href="#!tests ">Tests</a>
                 </li>
-
             </ul>
         </nav>
     </div>
