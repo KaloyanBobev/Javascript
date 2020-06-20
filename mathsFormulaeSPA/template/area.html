@@ -41,7 +41,7 @@
         <h3 id="area-triangle">area of Triangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="base=0,heightTriangle=0">
+                <fieldset ng-init="base=0; heightTriangle=0">
                     <legend class="text-primary">Triangle</legend>
                     <!-- <canvas id="canvas-triangle"></canvas> -->
                     <img src="../img/area-triangle.png" alt="triangle">
@@ -63,7 +63,7 @@
         <h3 id="area-rectangle">area of Rectangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="widthRect=0,heigthRect=0">
+                <fieldset ng-init="widthRect=0;heigthRect=0">
                     <legend class="text-primary">Rectangle</legend>
                     <canvas id="canvas-rectangle-area"></canvas>
                     <div class="text-info"> {{infos[8].information}}</div>
@@ -84,7 +84,7 @@
         <h3 id="area-polygon">area of Polygon</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="perimeterPolygon=0,aphotem=0">
+                <fieldset ng-init="perimeterPolygon=0;aphotem=0">
                     <legend class="text-primary">Polygon</legend>
                     <!-- <canvas id="canvas-polygon-area"></canvas> -->
                     <img src="{{infos[9].src}}" alt="polygon">
