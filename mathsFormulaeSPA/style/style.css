@@ -97,7 +97,7 @@ section {
 
 #accordion-area fieldset,
 #accordion fieldset {
-    width: 35%;
+    width: 100%;
     display: flex;
 }
 
