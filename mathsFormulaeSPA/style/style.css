@@ -13,6 +13,12 @@ body {
 
 /* navigation */
 
+@media only screen and (max-width: 48em) {
+    #second-bar {
+        display: none;
+    }
+}
+
 nav {
     background: var(--head-bg-color);
     border: 1px solid var(--blue-color);
