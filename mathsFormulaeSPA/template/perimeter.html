@@ -1,7 +1,3 @@
-<script src="../scripts/main.js"></script>
-<script src="../scripts/canvas.js"></script>
-
-<link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
 <section>
     <article id="accordion">
         <h3 id="perimeter-square">Perimeter of Square</h3>
@@ -36,8 +32,6 @@
                     <label for="tb-input-radius" class="blue-text">Radius:</label>
                     <input type="text" id="tb-input-radius" name="tb-input-radius" ng-model="radius" />
                     <br>
-                    <!-- <label for="tb-input-diameter" class="blue-text">Diameter:</label>
-                    <input type="text" id="tb-input-diameter" name="sade-a" ngmodel="diameter" /> -->
                     <div>Circle circumference
                         <spam id="container-circle" class="blue-text">{{radius*3.1415926535*2}} </spam>
                     </div>
@@ -112,3 +106,6 @@
         </div>
     </article>
 </section>
+<link rel="stylesheet" href="./lib/jquery-ui-1.12.1/jquery-ui.theme.css">
+<script src="../scripts/main.js"></script>
+<script src="../scripts/canvas.js"></script>
