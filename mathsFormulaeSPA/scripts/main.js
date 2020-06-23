@@ -30,7 +30,13 @@
   );
 
   $(function() {
-      $("#accordion").accordion();
+      $("#accordion").accordion({
+          collapsible: true,
+          active: false,
+          heightStyle: "content",
+          navigation: true,
+          active: 0
+      });
       let container = $(`#container`);
 
   });
@@ -39,3 +45,9 @@
       $("#accordion-area").accordion();
       let container = $(`#container`);
   });
+
+  var hash = window.location.hash;
+  var anchor = $('a[href$="' + hash + '"]');
+  if (anchor.length > 0) {
+      anchor.click();
+  }
