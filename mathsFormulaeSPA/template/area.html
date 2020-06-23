@@ -3,7 +3,7 @@
         <h3 id="square-area">Area of Square</h3>
         <div ng-controller="formulaeInfo">
             <form>
-                <fieldset ng-init="sideZ=0">
+                <fieldset>
                     <legend class="text-primary">Square</legend>
                     <canvas id="canvas-square-area">Your browser does not support the HTML5 canvas tag.</canvas>
                     <div class="text-info"> {{infos[5].information}}</div>
@@ -12,7 +12,7 @@
                     <label for="tb-input-square-area" class="blue-text">Side A:</label>
                     <input type="text" id="tb-input-square-area" name="tb-input-square" ng-model="sideZ" />
                     <div>Square area
-                        <spam class="blue-text">{{sideZ*sideZ}} </spam>
+                        <spam class="blue-text">{{+sideZ*(+sideZ)}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -21,7 +21,7 @@
         <h3 id="area-circle">area of Circle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="radiusA=0">
+                <fieldset>
                     <legend class="text-primary">Circle</legend>
                     <canvas id="canvas-circle-area">Your browser does not support the HTML5 canvas tag.</canvas>
                     <div class="text-info"> {{infos[6].information}}</div>
@@ -31,7 +31,7 @@
                     <input type="text" id="tb-input-radius-area" name="tb-input-radius-area" ng-model="radiusA" />
                     <br>
                     <div>Circle area
-                        <spam id="container-circle" class="blue-text">{{radiusA*radiusA*3.1415926535*2}} </spam>
+                        <spam id="container-circle" class="blue-text">{{+radiusA*(+radiusA)*3.1415926535*2}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -39,7 +39,7 @@
         <h3 id="area-triangle">area of Triangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="base=0; heightTriangle=0">
+                <fieldset>
                     <legend class="text-primary">Triangle</legend>
                     <!-- <canvas id="canvas-triangle"></canvas> -->
                     <img src="../img/area-triangle.png" alt="triangle">
@@ -53,7 +53,7 @@
                     <input type="text" id="tb-input-triangle-heightTriangle" name="tb-input-triangle-heightTriangle" ng-model="heightTriangle" />
                     <br>
                     <div>Triangle area
-                        <spam id="container-triangle-area" class="blue-text">{{0.5*base*heightTriangle}} </spam>
+                        <spam id="container-triangle-area" class="blue-text">{{+base*(+heightTriangle)*0.5}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -61,20 +61,20 @@
         <h3 id="area-rectangle">area of Rectangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="widthRect=0;heigthRect=0">
+                <fieldset>
                     <legend class="text-primary">Rectangle</legend>
                     <canvas id="canvas-rectangle-area"></canvas>
                     <div class="text-info"> {{infos[8].information}}</div>
                     <div class="blue-text">{{infos[8].formula}}</div>
                     <div>{{infos[8].explanation}}</div>
                     <label for="tb-input-rectangle-widthRect" class="blue-text">Width:</label>
-                    <input class="text-primary" type="text" id="tb-input-rectangle-widthRect" name="tb-input-rectangle-widthRect" ng-model="widthRect" />
+                    <input type="text" id="tb-input-rectangle-widthRect" name="tb-input-rectangle-widthRect" ng-model="widthRect" />
                     <br>
                     <label for="tb-input-rectangle-heigthRect" class="blue-text">Height:</label>
                     <input type="text" id="tb-input-rectangle-heigthRect" name="tb-input-rectangle-heigthRect" ng-model="heigthRect" />
                     <br>
                     <div>Rectangle area
-                        <spam id="container-rectangle" class="blue-text">{{heigthRect*widthRect}} </spam>
+                        <spam id="container-rectangle" class="blue-text">{{+heigthRect*(+widthRect)}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -82,7 +82,7 @@
         <h3 id="area-polygon">area of Polygon</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="perimeterPolygon=0;aphotem=0">
+                <fieldset>
                     <legend class="text-primary">Polygon</legend>
                     <!-- <canvas id="canvas-polygon-area"></canvas> -->
                     <img src="{{infos[9].src}}" alt="polygon">
@@ -96,7 +96,7 @@
                     <input type="text" id="tb-input-polygon-aphotem" name="tb-input-polygon-aphotem" ng-model="aphotem" />
                     <br>
                     <div>Polygon area
-                        <spam id="container-polygon" class="blue-text"> {{0.5*aphotem*perimeterPolygon}}</spam>
+                        <spam id="container-polygon" class="blue-text"> {{+aphotem*(+perimeterPolygon)*0.5}}</spam>
                     </div>
                 </fieldset>
             </form>
