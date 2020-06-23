@@ -84,6 +84,8 @@ nav ul li ul li a:hover {
 /* side nav */
 
 #side-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
 }
@@ -107,6 +109,8 @@ section {
 #accordion fieldset {
     width: 100%;
     display: flex;
+    display: "-moz-box";
+    display: "-ms-flexbox";
 }
 
 input[type=text] {
