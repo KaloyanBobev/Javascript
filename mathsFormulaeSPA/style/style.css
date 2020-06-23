@@ -1,5 +1,5 @@
 :root {
-    --head-bg-color: lightcoral;
+    --head-bg-color: rgb(59, 163, 77);
     --blue-color: blue;
     --border-radius: 0.5em;
 }
@@ -8,6 +8,7 @@ body {
     background-image: url("../img/maths.jpg");
     background-position: center;
     font-size: 1.5em;
+    width: 99%;
 }
 
 
@@ -20,6 +21,7 @@ body {
 }
 
 nav {
+    width: 101%;
     background: var(--head-bg-color);
     border: 1px solid var(--blue-color);
     border-radius: var(--border-radius);
@@ -41,7 +43,7 @@ nav ul li {
 
 nav ul li a,
 #side-nav ul li a {
-    color: #fff;
+    color: #ccc;
     display: block;
     font-size: 20px;
     padding: 1em 1em;
