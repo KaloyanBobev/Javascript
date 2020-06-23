@@ -3,16 +3,16 @@
         <h3 id="perimeter-square">Perimeter of Square</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="side=0">
+                <fieldset>
                     <legend class="text-primary">Square</legend>
                     <canvas id="canvas-square">Your browser does not support the HTML5 canvas tag.</canvas>
                     <div class="text-info"> {{infos[0].information}}</div>
                     <div class="blue-text">{{infos[0].formula}}</div>
                     <div>{{infos[0].explanation}}</div>
                     <label for="tb-input-square" class="blue-text">Side A:</label>
-                    <input type="text" id="tb-input-square" name="tb-input-square" ng-model="side" />
+                    <input type="text" id="tb-input-square" name="tb-input-square" ng-model="side" value=" " />
                     <div>Square circumference
-                        <spam class="blue-text">{{side*4}} </spam>
+                        <spam class="blue-text">{{+side*4}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -21,7 +21,7 @@
         <h3 id="perimeter-circle">Perimeter of Circle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="radius=0">
+                <fieldset>
                     <legend class="text-primary">Circle</legend>
                     <canvas id="canvas-circle">Your browser does not support the HTML5 canvas tag.</canvas>
                     <div class="text-info"> {{infos[1].information}}</div>
@@ -31,7 +31,7 @@
                     <input type="text" id="tb-input-radius" name="tb-input-radius" ng-model="radius" />
                     <br>
                     <div>Circle circumference
-                        <spam id="container-circle" class="blue-text">{{radius*3.1415926535*2}} </spam>
+                        <spam id="container-circle" class="blue-text">{{+radius*3.1415926535*2}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -39,7 +39,7 @@
         <h3 id="perimeter-triangle">Perimeter of Triangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="sideA=0,sideB=0,sideC=0">
+                <fieldset>
                     <legend class="text-primary">Triangle</legend>
                     <canvas id="canvas-triangle"></canvas>
                     <div class="text-info"> {{infos[2].information}}</div>
@@ -55,7 +55,7 @@
                     <input type="text" id="tb-input-triangle-c" name="tb-input-triangle-c" ng-model="sideC" />
                     <br>
                     <div>Triangle circumference
-                        <spam id="container-triangle" class="blue-text">{{sideA*1+sideB*1+sideC*1}} </spam>
+                        <spam id="container-triangle" class="blue-text">{{+sideA+(+sideB)+(+sideC)}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -63,7 +63,7 @@
         <h3 id="perimeter-rectangle">Perimeter of Rectangle</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="sideE=0,sideF=0">
+                <fieldset>
                     <legend class="text-primary">Rectangle</legend>
                     <canvas id="canvas-rectangle"></canvas>
                     <div class="text-info"> {{infos[3].information}}</div>
@@ -76,7 +76,7 @@
                     <input type="text" id="tb-input-rectangle-b" name="tb-input-rectangle-b" ng-model="sideF" />
                     <br>
                     <div>Rectangle circumference
-                        <spam id="container-rectangle" class="blue-text">{{sideE*2+sideF*2}} </spam>
+                        <spam id="container-rectangle" class="blue-text">{{+sideE*2+(+sideF*2)}} </spam>
                     </div>
                 </fieldset>
             </form>
@@ -84,7 +84,7 @@
         <h3 id="perimeter-polygon">Perimeter of Polygon</h3>
         <div>
             <form ng-controller="formulaeInfo">
-                <fieldset ng-init="numbers=0,sideS-=0">
+                <fieldset>
                     <legend class="text-primary">Polygon</legend>
                     <canvas id="canvas-polygon"></canvas>
                     <div class="text-info"> {{infos[4].information}}</div>
@@ -97,7 +97,7 @@
                     <input type="text" id="tb-input-polygon-a" name="tb-input-polygon-a" ng-model="sideS" />
                     <br>
                     <div>Polygon circumference
-                        <spam id="container-polygon" class="blue-text"> {{numbers*sideS}}</spam>
+                        <spam id="container-polygon" class="blue-text"> {{+numbers*(+sideS)}}</spam>
                     </div>
                 </fieldset>
             </form>
