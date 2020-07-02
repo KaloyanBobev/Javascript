@@ -1,3 +1,4 @@
+import { TodoService } from './../todo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,16 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
+  todos;
 
+  constructor(private TodoService: TodoService) { }
 
-  todos = [
-    { id: 1, name: 'Milk', dueDate: '08/08/2020' },
-    { id: 2, name: 'Beer', dueDate: '09/09/2020' },
-    { id: 3, name: 'Chips', dueDate: '09/09/2020' },
-  ];
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.todos = this.TodoService.getAll();
   }
 
   deleteTodo(todo) {
