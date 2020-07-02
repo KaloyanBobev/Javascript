@@ -1,3 +1,4 @@
+import { TodoService } from './todo.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +13,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   imports: [
     CommonModule,
     TodoRoutingModule,
-  ]
+  ],
+  providers: [TodoService]
 })
 export class TodoModule { }
