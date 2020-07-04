@@ -1,4 +1,5 @@
+<h1 class="p-3 mb-2 bg-primary text-white">Todo list</h1>
 <div *ngFor="let myTodo of todos">
     <app-todo [todo]="myTodo"></app-todo>
-    <button (click)="deleteTodo(myTodo)">Delete {{myTodo.name}}</button>
+    <button class="btn btn-outline-primary" (click)="deleteTodo(myTodo)">Delete {{myTodo.name}}</button>
 </div>
