@@ -6,10 +6,12 @@ import { TodoRoutingModule } from './todo-routing.module';
 import { TodoComponent } from './todo/todo.component';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoNewItemComponent } from './todo-new-item/todo-new-item.component';
 
 @NgModule({
   declarations: [TodoComponent,
-    TodoListComponent],
+    TodoListComponent,
+    TodoNewItemComponent],
   imports: [
     CommonModule,
     TodoRoutingModule,
