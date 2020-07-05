@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-new-item',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-new-item.component.css']
 })
 export class TodoNewItemComponent implements OnInit {
+  title = 'Add new Todo task';
+  @Input()
+  todos;
 
   constructor() { }
 
