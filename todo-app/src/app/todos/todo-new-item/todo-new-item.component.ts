@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TodoService } from './../todo.service';
 
 @Component({
   selector: 'app-todo-new-item',
@@ -7,12 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodoNewItemComponent implements OnInit {
   title = 'Add new Todo task';
-  @Input()
-  todos;
 
-  constructor() { }
+  todos: any = [];
+
+  constructor(private TodoService: TodoService) { }
 
   ngOnInit(): void {
+  }
+  addNewItem(newName: string, newDueDate: string) {
+    this.todos = this.TodoService.addTodo(newName, newDueDate);
   }
 
 }
