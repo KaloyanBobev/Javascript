@@ -1,7 +1,7 @@
-<h2>{{title}}</h2>
-<form method="post"></form>
-<legend for="name">Input task:</legend>
-<input type="text" id="name">
-<br>
-<legend for="due-date">Input due date:</legend>
-<input type="text" id="due-date">
+<h2 class="p-3 mb-2 bg-primary text-white">{{title}}</h2>
+
+<legend class="text-primary" for="name">Input task:</legend>
+<input class="row" type="text" id="name" #newName>
+<legend class="text-primary" for="due-date">Input due date:</legend>
+<input class="row" type="string" id="due-date" #newDate>
+<button class="btn btn-outline-primary" (click)="addNewItem(newName.value,newDate.value)">Click</button>
