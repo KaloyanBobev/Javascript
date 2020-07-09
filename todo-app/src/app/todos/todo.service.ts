@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TodoService {
-  counter = 4;
+
   todos = [
     { id: 1, name: 'Milk', dueDate: '08/08/2020', done: true },
     { id: 2, name: 'Beer', dueDate: '09/09/2020', done: false },
@@ -18,16 +18,14 @@ export class TodoService {
     return this.todos;
   }
   addTodo(newName: string, newDueDate: string) {
-
-    const newId = 0;
+    let newId = this.todos.length + 1;
     const newTodo = {
-      id: newId + this.counter,
+      id: newId,
       name: newName,
       dueDate: newDueDate,
       done: false
     };
 
-    this.counter += 1;
     this.todos.push(newTodo);
   }
 }
