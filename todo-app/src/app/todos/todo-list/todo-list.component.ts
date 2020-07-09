@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
   title = 'Todo list';
+
   todos;
 
   constructor(private TodoService: TodoService) { }
