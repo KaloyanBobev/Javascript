@@ -1,7 +1,7 @@
 <h1>Welcome!</h1>
 <div class="play-container">
     <p>
-        You've clicked <span (click)="countClick()">{{clickCounter}} thimes</span>
+        You've clicked <span (click)="countClick()">{{clickCounter}} </span>thimes
     </p>
 </div>
 
@@ -13,10 +13,7 @@
     </p>
 </div>
 
-<div class="play-container" [ngStyle]="{
-'background-color': clickCounter > 4 ? 'yellow': 'lightgray',
-
-}">
+<div class="play-container" [ngClass]="setClasses()">
 
     <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
         <p>
