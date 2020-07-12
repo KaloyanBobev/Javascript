@@ -1,3 +1,4 @@
+import { TodoService } from './../todo.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -11,7 +12,8 @@ export class TodoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
 
 }
