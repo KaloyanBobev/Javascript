@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+article {
+    padding: 2%;
+}
+
+button {
+    margin: 2%;
+}
+
+nav a {
+    flex-direction: row;
+}
