@@ -1,4 +1,4 @@
-<h1 class="p-3 mb-2 bg-primary text-white">{{title}}</h1>
+<h2 class="p-3 mb-2 bg-primary text-white">{{title}}</h2>
 <div *ngFor="let myTodo of todos">
     <app-todo [todo]="myTodo"></app-todo>
     <button class="btn-small btn-outline-primary" (click)="deleteTodo(myTodo)">Delete {{myTodo.name}}</button>
