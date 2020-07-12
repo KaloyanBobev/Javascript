@@ -20,4 +20,6 @@ export class TodoListComponent implements OnInit {
   deleteTodo(todo) {
     this.todos = this.todos.filter(x => x.name !== todo.name);
   }
+
+
 }
