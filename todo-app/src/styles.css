@@ -4,10 +4,6 @@ article {
     padding: 2%;
 }
 
-button {
-    margin: 2%;
-}
-
 nav a {
     flex-direction: row;
 }
