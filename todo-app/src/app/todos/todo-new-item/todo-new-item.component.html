@@ -6,7 +6,7 @@
     </div>
     <div>
         <legend class="text-primary" for="due-date">Input due date:</legend>
-        <input type="string" id="due-date" #newDate>
+        <input type="date" id="due-date" #newDate>
     </div>
-    <button class="btn-small btn-outline-primary" (click)="addNewItem(newName.value,newDate.value)">Click</button>
+    <button class="btn-small btn-outline-primary mt-3" (click)="addNewItem(newName.value,newDate.value)">Click</button>
 </article>
