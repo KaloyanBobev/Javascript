@@ -1,3 +1,8 @@
 <h3 class="text-primary"> Task {{todo.id}}: buy {{todo.name}}</h3>
-<span>Is Done: {{todo.done ?'&#x2705;':'&#10060;'}}</span>
-<div class="text-secondary">due date: {{todo.dueDate}}</div>
+Is Done:
+<ng-template [ngIf]="todo.done === true" [ngIfElse]="crossMark">&#x2705; </ng-template>
+<ng-template #crossMark>&#10060;</ng-template>
+<ng-template [ngIf]="todo.done===false">
+    <button class="btn-small btn-outline-primary m-2" (click)="changeCheck() ">Change </button>
+</ng-template>
+<div class="text-secondary m-2">due date: {{todo.dueDate}}</div>
