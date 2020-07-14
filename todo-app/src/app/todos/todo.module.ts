@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { TodoService } from './todo.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,6 +16,7 @@ import { TodoNewItemComponent } from './todo-new-item/todo-new-item.component';
   imports: [
     CommonModule,
     TodoRoutingModule,
+    FormsModule
   ],
   providers: [TodoService]
 })
