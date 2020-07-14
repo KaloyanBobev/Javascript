@@ -6,13 +6,14 @@ import { Injectable } from '@angular/core';
 export class TodoService {
 
   todos = [
-    { id: 1, name: 'Milk', dueDate: '08/08/2020', done: true },
-    { id: 2, name: 'Beer', dueDate: '09/09/2020', done: false },
-    { id: 3, name: 'Chips', dueDate: '09/09/2020', done: false },
+    { id: 1, name: 'Milk', dueDate: '2020-08-21', done: true },
+    { id: 2, name: 'Beer', dueDate: '2020-08-21', done: false },
+    { id: 3, name: 'Chips', dueDate: '2020-08-21', done: false },
   ];
   constructor() {
 
   }
+
 
   getAll() {
     return this.todos;
