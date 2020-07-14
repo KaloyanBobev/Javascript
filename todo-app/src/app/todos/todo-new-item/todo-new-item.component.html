@@ -2,11 +2,12 @@
 <article>
     <div>
         <legend class="text-primary" for="name">Input task:</legend>
-        <input type="text" id="name" #newName>
+        <input type="text" id="name" required [(ngModel)]="newName" placeholder="Buy milk">
+
     </div>
     <div>
         <legend class="text-primary" for="due-date">Input due date:</legend>
-        <input type="date" id="due-date" #newDate>
+        <input type="text" id="due-date" required [(ngModel)]="newDate" placeholder="yyyy-MM-dd">
     </div>
-    <button class="btn-small btn-outline-primary mt-3" (click)="addNewItem(newName.value,newDate.value)">Click</button>
+    <button class="btn-small btn-outline-primary mt-3" (click)="addNewItem()">Click</button>
 </article>
