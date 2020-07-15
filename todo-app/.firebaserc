@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todo-app-128c1": {
+      "hosting": {
+        "todo-app": [
+          "todo-app-128c1"
+        ]
+      }
+    }
+  }
+}
