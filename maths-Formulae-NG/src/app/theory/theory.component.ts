@@ -1,3 +1,4 @@
+import { TheoryService } from './theory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theory.component.scss']
 })
 export class TheoryComponent implements OnInit {
-
-  constructor() { }
+  infos;
+  constructor(private TheoryService: TheoryService) { }
 
   ngOnInit(): void {
+    this.infos = this.TheoryService.getAll();
   }
 
 }
