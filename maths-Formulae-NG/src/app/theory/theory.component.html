@@ -1,1 +1,13 @@
-<p>theory works!</p>
+<section>
+    <article>
+
+        <h2>Information for perimeter and area for square, circle, triangle, rectangle and polygon</h2>
+        <div *ngFor="let info of infos">
+            <h3>{{info.header}}</h3>
+            <img src="../../assets/img/{{info.src}}" alt="information">
+            <div>{{info.information}}</div>
+            <div>{{info.formula}}</div>
+            <div>{{info.explanation}}</div>
+        </div>
+    </article>
+</section>
