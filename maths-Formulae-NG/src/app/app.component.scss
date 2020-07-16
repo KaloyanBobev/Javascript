@@ -1,0 +1,40 @@
+$primary: rgb(111, 0, 255);
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background: $primary;
+    padding: 1em 0;
+    font-size: 1.5em;
+    a {
+        color: white;
+        text-decoration: none;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    a.logo {
+        font-weight: bold;
+        padding-left: 1em;
+    }
+    nav {
+        float: right;
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            li a {
+                padding: 1em;
+                &:hover {
+                    background: darken($primary, 10%);
+                }
+            }
+        }
+    }
+}
