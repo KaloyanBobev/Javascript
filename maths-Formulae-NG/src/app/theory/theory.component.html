@@ -1,12 +1,11 @@
 <section>
     <article>
-
-        <h2>Information for perimeter and area for square, circle, triangle, rectangle and polygon</h2>
+        <h2>Information for square, circle, triangle, rectangle and polygon</h2>
         <div *ngFor="let info of infos">
             <h3>{{info.header}}</h3>
-            <img src="../../assets/img/{{info.src}}" alt="information">
-            <div>{{info.information}}</div>
-            <div>{{info.formula}}</div>
+            <img src="../../assets/img/{{info.src}}" alt="information img">
+            <div>Information: {{info.information}}</div>
+            <div> Formula: {{info.formula}}</div>
             <div>{{info.explanation}}</div>
         </div>
     </article>
