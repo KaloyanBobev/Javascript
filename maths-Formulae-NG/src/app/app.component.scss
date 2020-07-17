@@ -1,7 +1,12 @@
-$primary: rgb(111, 0, 255);
+$primary: #93827F;
+$nav-text-color:#E0D2C3;
 body {
     margin: 0;
     padding: 0;
+    background: #bcd8b7;
+    background: -moz-linear-gradient(left, #bcd8b7 0%, #e0d2c3 100%);
+    background: -webkit-linear-gradient(left, #bcd8b7 0%, #e0d2c3 100%);
+    background: linear-gradient(to right, #bcd8b7 0%, #e0d2c3 100%);
 }
 
 .container {
@@ -14,7 +19,7 @@ header {
     padding: 1em 0;
     font-size: 1.5em;
     a {
-        color: white;
+        color: $nav-text-color;
         text-decoration: none;
         flex-direction: row;
         justify-content: flex-end;
