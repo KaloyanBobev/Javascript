@@ -1,1 +1,18 @@
-<p>perimeter works!</p>
+<h1>Perimeter</h1>
+<section>
+    <article>
+        <div *ngFor="let info of infos,index as i">
+            <h3>{{info.name}}</h3>
+            <img src="../../assets/img/{{info.src}}" alt="information img">
+            <div>Information: {{info.information}}</div>
+            <div> Formula: {{info.formula}}</div>
+            <div>{{info.explanation}}</div>
+            <label for="square-perimeter">{{info.variable}}</label>
+            <input type="number" id="square-perimeter">
+            <div>
+                <span>Square circumference</span>
+                <span>{{info.mathFormula}}</span>
+            </div>
+        </div>
+    </article>
+</section>
