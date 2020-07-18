@@ -1,3 +1,4 @@
+import { TheoryService } from './../theory/theory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerimeterComponent implements OnInit {
 
-  constructor() { }
+  infos;
 
-  ngOnInit(): void {
+  constructor(private TheoryService: TheoryService) { }
+
+  ngOnInit() {
+    this.infos = this.TheoryService.getAll();
   }
 
 }
