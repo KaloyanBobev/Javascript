@@ -10,7 +10,7 @@ export class TheoryComponent implements OnInit {
   infos;
   constructor(private TheoryService: TheoryService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.infos = this.TheoryService.getAll();
   }
 
