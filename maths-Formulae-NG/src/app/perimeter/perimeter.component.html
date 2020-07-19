@@ -1,17 +1,17 @@
 <h1>Perimeter</h1>
 <section>
     <article>
-        <div *ngFor="let info of infos,index as i">
-            <h3>{{info.name}}</h3>
-            <img src="../../assets/img/{{info.src}}" alt="information img">
-            <div>Information: {{info.information}}</div>
-            <div> Formula: {{info.formula}}</div>
-            <div>{{info.explanation}}</div>
-            <label for="square-perimeter">{{info.variable}}</label>
-            <input type="number" id="square-perimeter">
+        <div>
+            <h3>{{infos[0].name}}</h3>
+            <img src="../../assets/img/{{infos[0].src}}" alt="information img">
+            <div>Information: {{infos[0].information}}</div>
+            <div> Formula: {{infos[0].formula}}</div>
+            <div>{{infos[0].explanation}}</div>
+            <label for="square-perimeter">{{infos[0].variable}}</label>
+            <input type="number" id="square-perimeter" #val>
             <div>
                 <span>Square circumference</span>
-                <span>{{info.mathFormula}}</span>
+                <span>{{val*4}}</span>
             </div>
         </div>
     </article>
