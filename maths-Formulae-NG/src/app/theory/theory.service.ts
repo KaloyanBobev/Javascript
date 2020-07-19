@@ -12,10 +12,9 @@ export class TheoryService {
     formula: `P = 4 * A`,
     explanation: `A is the length of one of the sides.`,
     src: `perimeter-square.png`,
-    variable: ['Side A:', 'Side B:'],
-    mathFormula: (val: number) => {
-      return 4 * val;
-    }
+    variable: 'Side A:'
+
+
   }, {
     name: 'Circle',
     Headers: `The perimeter of Circle`,
