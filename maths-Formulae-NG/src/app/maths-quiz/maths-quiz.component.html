@@ -1,1 +1,13 @@
-<p>maths-quiz works!</p>
+<section>
+    <article>
+        <h1>Maths Quiz</h1>
+        <div *ngFor="let q of questions">
+            <h3>Question {{q.id+1}}</h3>
+            <h4>{{q.task}}</h4>
+            <img src="../../assets/img/{{q.src}}" alt="information img">
+            <label for="answer-{{q.id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{q.id}}">
+        </div>
+        <button>Check result</button>
+    </article>
+</section>
