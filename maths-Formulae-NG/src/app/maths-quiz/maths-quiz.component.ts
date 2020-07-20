@@ -1,3 +1,4 @@
+import { MathsQuizService } from './maths-quiz.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathsQuizComponent implements OnInit {
 
-  constructor() { }
+  questions;
 
-  ngOnInit(): void {
+  constructor(private MathsQuizService: MathsQuizService) { }
+
+  ngOnInit() {
+    this.questions = this.MathsQuizService.getAll();
   }
 
 }
