@@ -1,3 +1,4 @@
+import { TheoryService } from './../theory/theory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area.component.scss']
 })
 export class AreaComponent implements OnInit {
+  infos = [];
 
-  constructor() { }
+  valueSquare;
+  valueRadius;
+  valueH;
+  valueB;
+  valueW;
+  valueHeight;
+  valuePerimeter;
+  valueApthoteme;
 
-  ngOnInit(): void {
+  constructor(private TheoryService: TheoryService) { }
+
+  ngOnInit() {
+    this.infos = this.TheoryService.getAll();
   }
 
 }
