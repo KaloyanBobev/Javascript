@@ -6,3 +6,29 @@ body {
     background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 35%, #bcd8b7 69%, #e0d2c3 100%);
     background: linear-gradient(to right, #ffffff 0%, #ffffff 35%, #bcd8b7 69%, #e0d2c3 100%);
 }
+
+$text-color: #6BA292;
+section {
+    color: darken($text-color, 10%);
+    font-size: 1.5em;
+}
+
+article {
+    h1 {
+        text-align: center;
+        margin-top: 5%;
+    }
+    h2 {
+        margin: 5%;
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    &>div {
+        margin: 5%;
+        img {
+            opacity: 0.1;
+        }
+    }
+}
