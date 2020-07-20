@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perimeter.component.scss']
 })
 export class PerimeterComponent implements OnInit {
-  
-  infos=[];
+
+  infos = [];
+  value;
+  valueS;
+  valueCircle;
+  valueA;
+  valueB;
+  valueC;
+  valueW;
+  valueH;
+  valueSide;
+  valueNumber;
 
   constructor(private TheoryService: TheoryService) { }
 
