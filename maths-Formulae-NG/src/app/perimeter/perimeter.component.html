@@ -1,17 +1,81 @@
-<h1>Perimeter</h1>
 <section>
     <article>
+        <h1>Perimeter</h1>
         <div>
             <h3>{{infos[0].name}}</h3>
             <img src="../../assets/img/{{infos[0].src}}" alt="information img">
             <div>Information: {{infos[0].information}}</div>
             <div> Formula: {{infos[0].formula}}</div>
             <div>{{infos[0].explanation}}</div>
-            <label for="square-perimeter">{{infos[0].variable}}</label>
-            <input type="number" id="square-perimeter" #val>
+            <label for="{{infos[0].name}}-perimeter">{{infos[0].variable}} </label>
+            <input type="number" id="{{infos[0].name}}-perimeter" [(ngModel)]="valueS" placeholder="Enter length">
             <div>
-                <span>Square circumference</span>
-                <span>{{val*4}}</span>
+                <span>{{infos[0].name}} circumference</span>
+                <span><strong> {{valueS*4}}</strong></span>
+            </div>
+        </div>
+
+        <div>
+            <h3>{{infos[1].name}}</h3>
+            <img src="../../assets/img/{{infos[1].src}}" alt="information img">
+            <div>Information: {{infos[1].information}}</div>
+            <div> Formula: {{infos[1].formula}}</div>
+            <div>{{infos[1].explanation}}</div>
+            <label for="{{infos[1].name}}-perimeter">{{infos[1].variable}} </label>
+            <input type="number" id="{{infos[1].name}}-perimeter" [(ngModel)]="valueCircle" placeholder="Enter length">
+            <div>
+                <span>{{infos[1].name}} circumference</span>
+                <span><strong> {{valueCircle*3.141592*2}}</strong></span>
+            </div>
+        </div>
+
+        <div>
+            <h3>{{infos[2].name}}</h3>
+            <img src="../../assets/img/{{infos[2].src}}" alt="information img">
+            <div>Information: {{infos[2].information}}</div>
+            <div> Formula: {{infos[2].formula}}</div>
+            <div>{{infos[2].explanation}}</div>
+            <label for="{{infos[2].name}}-perimeter">{{infos[2].variable[0]}} </label>
+            <input type="number" id="{{infos[2].name}}-perimeter" [(ngModel)]="valueA" placeholder="Enter length">
+            <label for="{{infos[2].name}}-perimeter">{{infos[2].variable[1]}} </label>
+            <input type="number" id="{{infos[2].name}}-perimeter" [(ngModel)]="valueB" placeholder="Enter length">
+            <label for="{{infos[2].name}}-perimeter">{{infos[2].variable[2]}} </label>
+            <input type="number" id="{{infos[2].name}}-perimeter" [(ngModel)]="valueC" placeholder="Enter length">
+            <div>
+                <span>{{infos[2].name}} circumference</span>
+                <span><strong> {{(1*valueA) +(1* valueB) + (1*valueC)}}</strong></span>
+            </div>
+        </div>
+
+        <div>
+            <h3>{{infos[3].name}}</h3>
+            <img src="../../assets/img/{{infos[3].src}}" alt="information img">
+            <div>Information: {{infos[3].information}}</div>
+            <div> Formula: {{infos[3].formula}}</div>
+            <div>{{infos[3].explanation}}</div>
+            <label for="{{infos[3].name}}-perimeter">{{infos[3].variable[0]}} </label>
+            <input type="number" id="{{infos[3].name}}-perimeter" [(ngModel)]="valueW" placeholder="Enter width">
+            <label for="{{infos[3].name}}-perimeter">{{infos[3].variable[1]}} </label>
+            <input type="number" id="{{infos[3].name}}-perimeter" [(ngModel)]="valueH" placeholder="Enter height ">
+            <div>
+                <span>{{infos[3].name}} circumference</span>
+                <span><strong> {{(2*valueW)+(2*valueH)}}</strong></span>
+            </div>
+        </div>
+
+        <div>
+            <h3>{{infos[4].name}}</h3>
+            <img src="../../assets/img/{{infos[4].src}}" alt="information img">
+            <div>Information: {{infos[4].information}}</div>
+            <div> Formula: {{infos[4].formula}}</div>
+            <div>{{infos[4].explanation}}</div>
+            <label for="square-perimeter">{{infos[4].variable[0]}} </label>
+            <input type="number" id="square-perimeter" [(ngModel)]="valueSide" placeholder="Enter length">
+            <label for="square-perimeter">{{infos[4].variable[1]}} </label>
+            <input type="number" id="square-perimeter" [(ngModel)]="valueNumber" placeholder="Enter number">
+            <div>
+                <span>{{infos[4].name}} circumference</span>
+                <span><strong> {{valueSide*valueNumber}}</strong></span>
             </div>
         </div>
     </article>
