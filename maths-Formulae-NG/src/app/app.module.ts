@@ -10,6 +10,7 @@ import { AreaComponent } from './area/area.component';
 import { MathsQuizComponent } from './maths-quiz/maths-quiz.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { MathsQuizComponent } from './maths-quiz/maths-quiz.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
