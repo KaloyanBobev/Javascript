@@ -1,16 +1,12 @@
         article {
+            div>:nth-child(n) {
+                margin: 1%;
+            }
             input {
-                width: 2.5em;
+                width: 3em;
+                font-size: 1rem;
             }
             button {
                 margin: 1% 0 5% 50%;
             }
-        }
-        
-        .right {
-            border: 5px solid green;
-        }
-        
-        .wrong {
-            border: 5px solid red;
         }
