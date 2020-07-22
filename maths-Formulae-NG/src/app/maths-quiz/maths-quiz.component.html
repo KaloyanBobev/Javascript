@@ -8,6 +8,7 @@
             <label for="answer-{{q.id}}">Write you answer here:</label>
             <input type="text" id="answer-{{q.id}}" #result [style.background-color]='color'>
             <button (click)="checkResult(result.value,i)">Check result</button>
+
         </div>
 
     </article>
