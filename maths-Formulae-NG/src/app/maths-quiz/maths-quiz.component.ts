@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maths-quiz.component.scss']
 })
 export class MathsQuizComponent implements OnInit {
-
+  title;
   questions;
   color;
   array = [34.54, 26, 31.5, 25.2, 46.8];
@@ -23,8 +23,6 @@ export class MathsQuizComponent implements OnInit {
 
 
   checkResult(result, index) {
-
-
     if (+result === this.array[index]) {
       return this.color = 'green';
     } else {
