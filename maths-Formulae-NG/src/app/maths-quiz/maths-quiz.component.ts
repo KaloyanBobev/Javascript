@@ -10,6 +10,7 @@ export class MathsQuizComponent implements OnInit {
   title;
   questions;
   color;
+  result_id;
   array = [34.54, 26, 31.5, 25.2, 46.8];
   constructor(private MathsQuizService: MathsQuizService) { }
 
@@ -23,10 +24,14 @@ export class MathsQuizComponent implements OnInit {
 
 
   checkResult(result, index) {
+    debugger
     if (+result === this.array[index]) {
-      return this.color = 'green';
+      // this.result_id = result;
+      // this.color = 'green';
+      return true;
     } else {
-      return this.color = 'red';
+      // return this.color = 'red';
+      return false;
     }
   }
 }
