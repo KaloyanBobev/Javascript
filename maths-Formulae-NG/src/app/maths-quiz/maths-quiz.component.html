@@ -1,14 +1,15 @@
 <section>
     <article>
         <h1>Maths Quiz</h1>
-        <div *ngFor="let q of questions, let i=index">
-            <h3>Question {{q.id+1}} </h3>
-            <h4>{{q.task}}</h4>
-            <img src="../../assets/img/{{q.src}}" alt="information img">
-            <label for="answer-{{q.id}}">Write you answer here:</label>
-            <input type="text" id="answer-{{q.id}}" #result [style.background-color]='color'>
-            <button (click)="checkResult(result.value,i)">Check result</button>
-
+        <div>
+            <h3>Question {{questions[0].id+1}} </h3>
+            <h4>{{questions[0].task}}</h4>
+            <img src="../../assets/img/{{questions[0].src}}" alt="information img">
+            <label for="answer-{{questions[0].id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{questions[0].id}}" #result [style.background-color]='color'>
+            <ng-template *ngIf=>
+                </span>
+                <button (click)="checkResult(result.value,0)">Check result</button>
         </div>
 
     </article>
