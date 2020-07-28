@@ -6,11 +6,47 @@
             <h4>{{questions[0].task}}</h4>
             <img src="../../assets/img/{{questions[0].src}}" alt="information img">
             <label for="answer-{{questions[0].id}}">Write you answer here:</label>
-            <input type="text" id="answer-{{questions[0].id}}" #result [style.background-color]='color'>
-            <ng-template *ngIf=>
-                </span>
-                <button (click)="checkResult(result.value,0)">Check result</button>
-        </div>
+            <input type="text" id="answer-{{questions[0].id}}" #result>
+            <span [innerHTML]="result.value ==='34.54'?'Correct':'Incorect'" [ngStyle]="result.value === '34.54'?{'color':'green'}:{'color':'red'}"></span>
 
+        </div>
+        <div>
+            <h3>Question {{questions[1].id+1}} </h3>
+            <h4>{{questions[1].task}}</h4>
+            <img src="../../assets/img/{{questions[1].src}}" alt="information img">
+            <label for="answer-{{questions[1].id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{questions[1].id}}" #result1>
+            <span [innerHTML]="result1.value === '26'?'Correct':'Incorect'" [ngStyle]="result1.value === '26'?{'color':'green'}:{'color':'red'}"></span>
+
+        </div>
+        <div>
+            <h3>Question {{questions[2].id+1}} </h3>
+            <h4>{{questions[2].task}}</h4>
+            <img src="../../assets/img/{{questions[2].src}}" alt="information img">
+            <label for="answer-{{questions[2].id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{questions[2].id}}" #result2>
+            <span [innerHTML]="result2.value === '31.5'?'Correct':'Incorect'" [ngStyle]="result2.value === '31.5'?{'color':'green'}:{'color':'red'}"></span>
+
+        </div>
+        <div>
+            <h3>Question {{questions[3].id+1}} </h3>
+            <h4>{{questions[3].task}}</h4>
+            <img src="../../assets/img/{{questions[3].src}}" alt="information img">
+            <label for="answer-{{questions[3].id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{questions[3].id}}" #result3>
+            <span [innerHTML]="result3.value === '25.2'?'Correct':'Incorect'" [ngStyle]="result3.value === '25.2'?{'color':'green'}:{'color':'red'}"></span>
+
+        </div>
+        <div>
+            <h3>Question {{questions[4].id+1}} </h3>
+            <h4>{{questions[4].task}}</h4>
+            <img src="../../assets/img/{{questions[4].src}}" alt="information img">
+            <label for="answer-{{questions[4].id}}">Write you answer here:</label>
+            <input type="text" id="answer-{{questions[4].id}}" #result4>
+            <span [innerHTML]="result4.value === ' 46.8'?'Correct':'Incorect'" [ngStyle]="result4.value === '46.8'?{'color':'green'}:{'color':'red'}"></span>
+
+        </div>
+        <button class="button" (click)="checkResult(result4.value,4)">Check result</button>
     </article>
+
 </section>
