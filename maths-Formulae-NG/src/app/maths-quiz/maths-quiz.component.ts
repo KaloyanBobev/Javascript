@@ -7,31 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maths-quiz.component.scss']
 })
 export class MathsQuizComponent implements OnInit {
+
   title;
   questions;
-  color;
-  result_id;
-  array = [34.54, 26, 31.5, 25.2, 46.8];
+  array;
+  mathsResult;
   constructor(private MathsQuizService: MathsQuizService) { }
 
   ngOnInit() {
     this.questions = this.MathsQuizService.getAll();
+    this.array = this.MathsQuizService.array;
   }
 
-  ngOnChanges() {
-    this.checkResult;
-  }
 
 
   checkResult(result, index) {
-    debugger
+
     if (+result === this.array[index]) {
-      // this.result_id = result;
-      // this.color = 'green';
-      return true;
+
+      return this.mathsResult = true;
     } else {
-      // return this.color = 'red';
-      return false;
+
+      return this.mathsResult = false;
     }
   }
 }
