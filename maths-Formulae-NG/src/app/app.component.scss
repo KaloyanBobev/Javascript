@@ -12,8 +12,9 @@ body {
 
 header {
     background: $primary;
-    padding: 1em 0;
-    font-size: 1.5em;
+    padding: 1em;
+    font-size: 1.5rem;
+    height: 3.5em;
     a {
         color: $nav-text-color;
         text-decoration: none;
@@ -23,6 +24,14 @@ header {
     a.logo {
         font-weight: bold;
         padding-left: 1em;
+    }
+    @media (max-width: 1020px) {
+        .logo {
+            display: none;
+        }
+        .nav-bar {
+            font-size: 0.7em;
+        }
     }
     nav {
         float: right;
@@ -39,10 +48,3 @@ header {
         }
     }
 }
-
-// .isDisabled {
-//     color: currentColor;
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//     text-decoration: none;
-// }
