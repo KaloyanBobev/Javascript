@@ -13,8 +13,8 @@ body {
 header {
     background: $primary;
     padding: 1em;
-    font-size: 1.5rem;
-    height: 3.5em;
+    font-size: 1.1rem;
+    height: 3.8em;
     a {
         color: $nav-text-color;
         text-decoration: none;
@@ -29,9 +29,6 @@ header {
         .logo {
             display: none;
         }
-        .nav-bar {
-            font-size: 0.7em;
-        }
     }
     nav {
         float: right;
@@ -39,7 +36,8 @@ header {
             list-style-type: none;
             display: flex;
             margin: 0;
-            li a {
+            li {}
+            a {
                 padding: 1em;
                 &:hover {
                     background: darken($primary, 10%);
