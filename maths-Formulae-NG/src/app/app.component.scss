@@ -5,43 +5,28 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-header {
+nav {
     background: $primary;
     padding: 1em;
+    margin-bottom: 5em;
     font-size: 1.1rem;
-    height: 3.8em;
+    height: 3.7em;
     a {
         color: $nav-text-color;
-        text-decoration: none;
-        flex-direction: row;
-        justify-content: flex-end;
     }
-    a.logo {
-        font-weight: bold;
-        padding-left: 1em;
-    }
-    @media (max-width: 1020px) {
-        .logo {
-            display: none;
+    ul {
+        flex: auto;
+        @media (max-width: 764px) {
+            li {
+                width: 10em;
+                background-color: $primary;
+            }
         }
-    }
-    nav {
-        float: right;
-        ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            li {}
-            a {
-                padding: 1em;
-                &:hover {
-                    background: darken($primary, 10%);
-                }
+        a {
+            color: $nav-text-color;
+            padding: 1em;
+            &:hover {
+                background: darken($primary, 10%);
             }
         }
     }
