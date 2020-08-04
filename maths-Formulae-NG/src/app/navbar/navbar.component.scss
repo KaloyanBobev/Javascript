@@ -1,0 +1,28 @@
+$primary: #93827F;
+$nav-text-color:#E0D2C3;
+nav {
+    background: $primary;
+    padding: 1em;
+    margin-bottom: 5em;
+    font-size: 1.1rem;
+    height: 3.7em;
+    a {
+        color: $nav-text-color;
+    }
+    ul {
+        flex: auto;
+        @media (max-width: 764px) {
+            li {
+                width: 10em;
+                background-color: $primary;
+            }
+        }
+        a {
+            color: $nav-text-color;
+            padding: 1em;
+            &:hover {
+                background: darken($primary, 10%);
+            }
+        }
+    }
+}
