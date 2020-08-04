@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PerimeterComponent } from './perimeter/perimeter.component';
 import { AreaComponent } from './area/area.component';
 import { MathsQuizComponent } from './maths-quiz/maths-quiz.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -19,6 +20,7 @@ import { MathsQuizComponent } from './maths-quiz/maths-quiz.component';
     PerimeterComponent,
     AreaComponent,
     MathsQuizComponent,
+    NavbarComponent,
 
   ],
   imports: [
