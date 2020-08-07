@@ -1,5 +1,8 @@
+$font-size:1em;
+$length:2em;
+
 body {
-  font: 1em "Century Gothic", Futura, sans-serif;
+  font: $font-size "Century Gothic", Futura, sans-serif;
   margin: 20px;
 }
 
@@ -21,15 +24,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: $font-size*1.5;
   font-weight: bold;
-  line-height: 2em;
-  height: 2em;
+  line-height: $length;
+  height: $length;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 2em;
+  width: $length;
   cursor: pointer;
 }
 
@@ -48,4 +51,10 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+.btn{
+  width: 9em;
+  background-color: lavender;
+  margin: 0.5em;
 }
