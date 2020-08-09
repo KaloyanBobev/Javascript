@@ -2,5 +2,21 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './index.css';
 
-ReactDom.render(<div><h1>Hello world!</h1><p>Paragraht</p></div>,
-    document.getElementById('root'));
+function MyInfo() {
+    return (
+        <article>
+            <h1>Kaloyan</h1>
+            <p>Some biography</p>
+            <ol>
+                <li>Rome</li>
+                <li>Liverpool</li>
+                <li>Jamaica</li>
+            </ol>
+        </article>
+    )
+}
+
+ReactDom.render(
+    <MyInfo />,
+    document.getElementById('root')
+);
