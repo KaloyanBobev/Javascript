@@ -1,6 +1,10 @@
 body{
     background-color: aqua;
 }
+
+main{
+    background-color: burlywood;
+}
 li{
     font-size: large;
 }
