@@ -3,15 +3,9 @@ import React from 'react';
 import productData from './vschoolProducts';
 import Product from './components/Product';
 function App() {
-    const productComponents = productData.map((prod) => {
+    const productComponents = productData.map((item) => {
         return (
-            <Product
-                key={prod.id}
-                name={prod.name}
-                price={prod.price}
-                description={prod.description}
-            />
-
+            <Product key={item.id} product={item} />
         )
     }
 
