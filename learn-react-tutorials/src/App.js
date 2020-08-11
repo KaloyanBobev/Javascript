@@ -1,40 +1,20 @@
 import React from 'react';
+
 import Joke from './components/Joke';
+import jokesData from './JokesData';
 
 function App() {
+    const jokeComponents = jokesData.map((joke) => {
+        return (
+            <Joke key={joke.id} question={joke.question}
+                punctLine={joke.punctLine}
+            />
+        )
+    })
+
     return (
         <div className="container">
-            <Joke
-                joke={{
-                    question: "Who I am",
-                    punctLine: "..."
-
-                }} />
-
-            <Joke
-                joke={{
-                    question: "Is I am tall",
-                    punctLine: "..."
-
-                }} />
-            <Joke
-                joke={{
-                    question: "Who big I am",
-                    punctLine: "..."
-
-                }} />
-            <Joke
-                joke={{
-                    question: "Is Jorge out of the country",
-                    punctLine: "..."
-
-                }} />
-            <Joke
-                joke={{
-                    question: "Is Alex short",
-                    punctLine: "..."
-
-                }} />
+            {jokeComponents}
         </div>
     )
 }
