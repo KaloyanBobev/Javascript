@@ -2,15 +2,3 @@ body{
     width: 30%;
     background-color:honeydew;
 }
-
-.container{
-    margin:15%;
-    padding: 5%;
-    background-color: beige;
-    border:2px solid black;
-   cursor: pointer;
-}
-
-.question{
-    border-bottom: 1px inset gray;
-}
