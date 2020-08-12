@@ -4,8 +4,12 @@ body{
 }
 ul{
     width: 30%;
+    margin:5%;
+    padding:5%;
+      background-color:blanchedalmond;
 }
 .todolist{
-    background-color:blanchedalmond;
+  
     border-bottom: 1px solid gray;
+    padding: 2em;
 }
