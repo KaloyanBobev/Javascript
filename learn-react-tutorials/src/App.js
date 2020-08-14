@@ -1,25 +1,26 @@
 import React from 'react';
 
-function handleClick() {
-
-    alert("Clicked");
-
-}
-
-function hovered() {
-    alert('hovered')
-}
-
 class App extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            count: 0
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-
+    handleClick() {
+        this.setState((prevState) => {
+            return {
+                count: prevState.count + 1,
+            }
+        })
+    }
     render() {
         return (
             <div>
-                <img onMouseOver={hovered} alt="bus" src="https://image.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-71.jpg"></img>
-                <br></br>
-                <br></br>
-                <button onClick={handleClick}>Click me</button>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.handleClick}>Change!</button>
             </div>
         )
     }
