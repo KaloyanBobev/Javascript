@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class App extends React.Component {
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            name: 'Jorge',
+            age: 27
+        }
+    }
+
     render() {
         return (
-            <div>APP</div>
+            <div>
+                <h3>{this.state.name}</h3>
+                <h3>{this.state.age} years old</h3>
+            </div>
         )
     }
 }
+
 export default App;
