@@ -6,21 +6,46 @@ class App extends React.Component {
         this.state = {
             count: 0
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handlerClick = this.handlerClick.bind(this);
+        this.multiplyByTwo = this.multiplyByTwo.bind(this);
+        this.dividebytwo = this.dividebytwo.bind(this)
     }
 
-    handleClick() {
+    handlerClick() {
         this.setState((prevState) => {
             return {
                 count: prevState.count + 1,
             }
         })
     }
+
+    multiplyByTwo() {
+        this.setState((prevState) => {
+            return {
+                count: prevState.count * 2
+            }
+        })
+    }
+
+
+
+
+    dividebytwo() {
+        this.setState((prevState) => {
+            return {
+                count: prevState.count / 2
+            }
+        })
+    }
+
+
     render() {
         return (
             <div>
-                <h1>{this.state.count}</h1>
-                <button onClick={this.handleClick}>Change!</button>
+                <h2>{this.state.count}</h2>
+                <button onClick={this.handlerClick}>Click</button>
+                <button onClick={this.multiplyByTwo}>Multiply by 2</button>
+                <button onClick={this.dividebytwo}>dividebytwo</button>
             </div>
         )
     }
