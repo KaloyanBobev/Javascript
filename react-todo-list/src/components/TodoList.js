@@ -1,19 +1,20 @@
 import React from 'react';
 
-class TodoList extends React.Component {
+function TodoList(props) {
 
-    render() {
-        return (
-            <div>
-                <li className="todolist">
-                    <input type="checkbox" onClick={() => {
-                        alert('changed')
-                    }} checked={this.props.product.complated}></input>
-                    <label>Task: {this.props.product.text}</label>
 
-                </li>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <li className="todolist">
+                <input type="checkbox"
+                    checked={props.product.complated}
+                    onChange={() => props.handleChange(props.product.id)
+                    }></input>
+                <label>Task: {props.product.text}</label>
+
+            </li>
+        </div>
+    )
 }
+
 export default TodoList;

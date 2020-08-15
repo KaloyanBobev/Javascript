@@ -27,9 +27,6 @@ class App extends React.Component {
         })
     }
 
-
-
-
     dividebytwo() {
         this.setState((prevState) => {
             return {
