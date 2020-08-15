@@ -3,6 +3,8 @@ body{
     background-color:honeydew;
 }
 
-img{
-    width: 10em;
+button{
+    margin-left:1em;
+    background-color: lightblue;
+    font-size: 1em;
 }
