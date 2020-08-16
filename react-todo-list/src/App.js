@@ -56,7 +56,7 @@ class App extends React.Component {
         }
 
         return (
-            <div>
+            <div className="container">
                 <h1 style={styles}>Good {timeOfDay}!</h1>
                 {todoComponents}
             </div>
