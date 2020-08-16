@@ -5,23 +5,17 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            isLoading: true
+            unreadMesseges: [
+                'Call your mom!',
+                'New spam email available.All links defenetly safe to click'
+            ]
         };
     }
-
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                isLoading: false
-            });
-        }, 1500);
-    };
 
     render() {
         return (
             <div>
-                {this.state.isLoading ? <h1>Loading...</h1> :
-                    <Conditional />}
+                <h2>You have {this.state.unreadMesseges.length} unreaded massages</h2>
             </div>
         )
     }
