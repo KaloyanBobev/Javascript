@@ -1,27 +1,15 @@
 import React from 'react';
-import Conditional from './components/Conditional'
 
 class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            unreadMesseges: [
-                'Call your mom!',
-                'New spam email available.All links defenetly safe to click'
-            ]
-        };
-    }
 
     render() {
         return (
             <div>
-                {
-                    this.state.unreadMesseges.length > 0 &&
-                    <h2>You have {this.state.unreadMesseges.length} unreaded massages </h2>
-                }
+                Code goes here
             </div>
         )
     }
+
 }
 
 export default App;
