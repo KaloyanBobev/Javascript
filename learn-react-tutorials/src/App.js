@@ -15,7 +15,10 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h2>You have {this.state.unreadMesseges.length} unreaded massages</h2>
+                {
+                    this.state.unreadMesseges.length > 0 &&
+                    <h2>You have {this.state.unreadMesseges.length} unreaded massages </h2>
+                }
             </div>
         )
     }
