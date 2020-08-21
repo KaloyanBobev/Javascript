@@ -2,16 +2,6 @@ body{
     width: 30%;
     background-color:honeydew;
 }
-fieldset{
- display: flex;
-}
-fieldset>*{
-    flex-direction: column;
-     margin:1em;
-}
-input[type=text]{
-    margin-left:1em;
-    background-color: lightblue;
-    font-size: 1em;
-    width:6em;
+img{
+    width:40%
 }
