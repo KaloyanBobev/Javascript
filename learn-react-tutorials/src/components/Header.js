@@ -3,7 +3,12 @@ import React from 'react';
 class Header extends React.Component {
     render() {
         return (
-            <h1>Header</h1>
+            <header>
+                <img src="https://i.ytimg.com/vi/kcMt_Rc6ZLs/maxresdefault.jpg"
+                    alt="Problem?" />
+                <p>Meme Gen</p>
+            </header>
+
         )
     }
 }
