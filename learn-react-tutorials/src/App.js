@@ -1,12 +1,12 @@
 import React from 'react';
 
 class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            firstName: ""
-        }
+    //Change to use class properties
+    state = {
+        firstName: ""
     }
+
+
     //Change to use arrow function
     handleChange = (event) => {
         const { name, value } = event.target
