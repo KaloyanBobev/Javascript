@@ -1,7 +1,23 @@
 body{
-    width: 30%;
+    
     background-color:honeydew;
 }
-img{
-    width:40%
+
+ul{
+    display:flex;
+   
+    background-color: green;
+   
+}
+
+li{
+    list-style: none;
+    margin: 1em;
+    
+   
+}
+a{
+     text-decoration: none;
+    color: black;
+    font-size: 2em;
 }
