@@ -1,4 +1,5 @@
 import React from 'react';
+import auth from './auth';
 
 export default class AppLoyout extends React.Component {
     //Change to use class properties
@@ -13,6 +14,13 @@ export default class AppLoyout extends React.Component {
             [name]: value
         })
     }
+
+    handleClick = (event) => {
+        auth.logout(() => {
+            this.props.history.push("/");
+        })
+    }
+
     render() {
         return (
             <div>
@@ -26,6 +34,7 @@ export default class AppLoyout extends React.Component {
                     />
                 </form>
                 <h1>{this.state.firstName}</h1>
+                <button onClick={this.handleClick}>Logout</button>
             </div>
         )
     }
