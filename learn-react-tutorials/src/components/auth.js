@@ -17,4 +17,4 @@ class Auth {
         return this.autenticated;
     }
 }
-export default new Auth()
+export default new Auth();
